@@ -1,0 +1,12 @@
+..\build\port.o: ..\bsp\cubemx\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\port.c
+..\build\port.o: ..\bsp\cubemx\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h
+..\build\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\build\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\build\port.o: ..\bsp\cubemx\Core\Inc\FreeRTOSConfig.h
+..\build\port.o: ..\bsp\cubemx\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h
+..\build\port.o: ..\bsp\cubemx\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h
+..\build\port.o: ..\bsp\cubemx\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h
+..\build\port.o: ..\bsp\cubemx\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h
+..\build\port.o: ..\bsp\cubemx\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h
+..\build\port.o: ..\bsp\cubemx\Middlewares\Third_Party\FreeRTOS\Source\include\task.h
+..\build\port.o: ..\bsp\cubemx\Middlewares\Third_Party\FreeRTOS\Source\include\list.h

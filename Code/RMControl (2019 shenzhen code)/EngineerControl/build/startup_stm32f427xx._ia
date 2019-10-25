@@ -1,0 +1,8 @@
+--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"
+-IC:\Users\Sean\Desktop\RMControl\EngineerControl\MDK-ARM\RTE\Compiler
+-IC:\Users\Sean\Desktop\RMControl\EngineerControl\MDK-ARM\RTE\_Flash
+-IC:\Keil_v5\ARM\PACK\Keil\ARM_Compiler\1.2.0\Include
+-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+-IC:\Keil_v5\ARM\CMSIS\Include
+--pd "__UVISION_VERSION SETA 522" --pd "_RTE_ SETA 1" --pd "STM32F427xx SETA 1"
+--list ..\build\startup_stm32f427xx.lst --xref -o ..\build\startup_stm32f427xx.o --depend ..\build\startup_stm32f427xx.d "..\bsp\cubemx\Core\Src\startup_stm32f427xx.s"
