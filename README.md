@@ -3,3 +3,4 @@ This reporitory contain English documentation of Queen's Robomaster ES documenta
 
 
 PLEASE GOTO WIKI SECTION
+![](https://github.com/sikaxn/QRMWiki/blob/master/IMG/robomaster.png)
