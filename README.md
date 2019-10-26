@@ -11,4 +11,4 @@ PLEASE GOTO WIKI SECTION
 ![](https://github.com/sikaxn/QRMWiki/blob/master/IMG/robomaster.png)
 
 
-Technical support of this git repository: Nathan zhou: 15jz38@queensu.ca
+
