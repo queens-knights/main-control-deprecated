@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=NetCAP_1 Pin=CAP-1
+Removed Pin From Net: NetName=NetCAP_1 Pin=OUT-0
+Change Component Designator: OldDesignator=IN NewDesignator=P1
+Change Component Designator: OldDesignator=OUT NewDesignator=P2
+Added Component: Designator=P3(端口2P)
+Added Component: Designator=P4(端口2P)
+Added Pin To Net: NetName=GND Pin=P3-1
+Added Pin To Net: NetName=NetCAP_1 Pin=P4-0
+Added Pin To Net: NetName=GND Pin=P4-1
+Change Net Name : Old Net Name=NetCAP_1 New Net Name=NetD1_1
+Added Pin To Net: NetName=NetCAP_1 Pin=CAP-1
+Added Pin To Net: NetName=NetCAP_1 Pin=P2-0
+Added Pin To Net: NetName=NetCAP_1 Pin=P3-0
+Added Net: Name=NetCAP_1
+Added Member To Class: ClassName=Sheet2 Member=Component P3 输出端口1
+Added Member To Class: ClassName=Sheet2 Member=Component P4 输出端口1
+Added Room: Name=Sheet2

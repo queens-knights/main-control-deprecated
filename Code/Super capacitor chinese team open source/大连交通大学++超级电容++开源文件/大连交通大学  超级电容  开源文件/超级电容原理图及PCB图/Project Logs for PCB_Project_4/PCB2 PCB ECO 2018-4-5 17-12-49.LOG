@@ -1,0 +1,32 @@
+Removed Pin From Net: NetName=NetD1_1 Pin=D2-1
+Removed Pin From Net: NetName=NetD1_2 Pin=D2-2
+Removed Pin From Net: NetName=NetCAP_1 Pin=P3-0
+Removed Pin From Net: NetName=24V Pin=Q1-3
+Removed Pin From Net: NetName=24V Pin=Q2-3
+Change Component Footprint: Designator=D1 Old Footprint=SMC(DO-214AB)_S1 New Footprint=SMC(DO-214AB)_S2
+Change Component Footprint: Designator=D3 Old Footprint=SMC(DO-214AB)_S1 New Footprint=SMC(DO-214AB)_S2
+Change Component Comment : Designator=P2 Old Comment=输出端口 New Comment=输入端口
+Change Component Designator: OldDesignator=D3 NewDesignator=D2
+Added Component: Designator=D3(SMC(DO-214AB)_S2)
+Added Component: Designator=D4(SMC(DO-214AB)_S2)
+Added Component: Designator=Q4(TO-92A)
+Added Component: Designator=R13(0805)
+Added Pin To Net: NetName=NetCAP_1 Pin=D3-2
+Added Pin To Net: NetName=24V Pin=D4-1
+Added Pin To Net: NetName=NetD1_2 Pin=Q4-1
+Added Pin To Net: NetName=NetQ3_2 Pin=Q4-3
+Added Pin To Net: NetName=24V Pin=R13-2
+Added Pin To Net: NetName=NetD3_1 Pin=D3-1
+Added Pin To Net: NetName=NetD3_1 Pin=P3-0
+Added Net: Name=NetD3_1
+Added Pin To Net: NetName=NetD4_2 Pin=D4-2
+Added Pin To Net: NetName=NetD4_2 Pin=Q1-3
+Added Pin To Net: NetName=NetD4_2 Pin=Q2-3
+Added Net: Name=NetD4_2
+Added Pin To Net: NetName=NetQ4_2 Pin=Q4-2
+Added Pin To Net: NetName=NetQ4_2 Pin=R13-1
+Added Net: Name=NetQ4_2
+Added Member To Class: ClassName=Sheet2 Member=Component D4 D ss54
+Added Member To Class: ClassName=Sheet2 Member=Component Q4 PNP8550
+Added Member To Class: ClassName=Sheet2 Member=Component R13 Res（0402-5205）
+Added Room: Name=Sheet2

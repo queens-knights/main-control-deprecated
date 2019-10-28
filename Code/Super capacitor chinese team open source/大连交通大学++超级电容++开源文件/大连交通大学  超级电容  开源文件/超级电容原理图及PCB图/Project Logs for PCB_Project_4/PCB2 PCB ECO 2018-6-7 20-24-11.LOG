@@ -1,0 +1,17 @@
+Added Component: Designator=R3(0805)
+Added Component: Designator=R6(0805)
+Added Component: Designator=R9(0805)
+Added Component: Designator=R12(0805)
+Added Pin To Net: NetName=Net3_1 Pin=R3-1
+Added Pin To Net: NetName=24V Pin=R3-2
+Added Pin To Net: NetName=Net3_1 Pin=R6-1
+Added Pin To Net: NetName=GND Pin=R6-2
+Added Pin To Net: NetName=GND Pin=R9-1
+Added Pin To Net: NetName=A3 Pin=R9-2
+Added Pin To Net: NetName=A3 Pin=R12-1
+Added Pin To Net: NetName=Net3_2 Pin=R12-2
+Added Member To Class: ClassName=Sheet2 Member=Component R3 Res£¨0402-5205£©
+Added Member To Class: ClassName=Sheet2 Member=Component R6 Res£¨0402-5205£©
+Added Member To Class: ClassName=Sheet2 Member=Component R9 Res£¨0402-5205£©
+Added Member To Class: ClassName=Sheet2 Member=Component R12 Res£¨0402-5205£©
+Added Room: Name=Sheet2

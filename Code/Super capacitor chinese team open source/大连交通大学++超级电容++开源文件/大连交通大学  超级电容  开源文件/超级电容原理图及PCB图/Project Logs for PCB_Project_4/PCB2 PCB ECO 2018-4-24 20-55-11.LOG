@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=NetD1_2 Pin=M-1
+Removed Pin From Net: NetName=NetQ4_B Pin=Q4-B
+Removed Pin From Net: NetName=NetQ3_2 Pin=Q4-C
+Removed Pin From Net: NetName=NetD3_2 Pin=Q4-E
+Removed Pin From Net: NetName=NetQ4_B Pin=R13-1
+Removed Member From Class: ClassName=Sheet2 Member=
+Added Component: Designator=CAP  22PF(直插件)
+Added Component: Designator=D5(SMA(DO-214AC)_S2)
+Added Component: Designator=D6(SMA(DO-214AC)_S2)
+Added Component: Designator=大功率(大功率电阻)
+Added Pin To Net: NetName=NetD1_2 Pin=D5-1
+Added Pin To Net: NetName=GND Pin=D6-1
+Added Pin To Net: NetName=NetD1_2 Pin=D6-2
+Added Pin To Net: NetName=GND Pin=大功率-0
+Added Pin To Net: NetName=NetQ4_B Pin=大功率-1
+Change Net Name : Old Net Name=NetD1_2 New Net Name=NetCAP  22PF_1
+Change Net Name : Old Net Name=NetQ4_B New Net Name=NetCAP  22PF_0
+Added Pin To Net: NetName=NetD5_2 Pin=D5-2
+Added Pin To Net: NetName=NetD5_2 Pin=M-1
+Added Net: Name=NetD5_2
+Added Pin To Net: NetName=NetQ4_2 Pin=R13-1
+Added Net: Name=NetQ4_2
+Added Member To Class: ClassName=Sheet2 Member=Component CAP  22PF 直插件
+Added Member To Class: ClassName=Sheet2 Member=Component D5 SS54
+Added Member To Class: ClassName=Sheet2 Member=Component D6 SS54
+Added Member To Class: ClassName=Sheet2 Member=Component 大功率 R
+Added Room: Name=Sheet2

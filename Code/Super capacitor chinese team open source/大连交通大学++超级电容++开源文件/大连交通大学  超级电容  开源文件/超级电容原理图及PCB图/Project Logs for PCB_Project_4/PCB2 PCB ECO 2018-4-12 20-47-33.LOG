@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=IN1 NewDesignator=P1
+Change Component Designator: OldDesignator=IN2 NewDesignator=P3
+Change Component Designator: OldDesignator=OUT1 NewDesignator=P2
+Change Component Designator: OldDesignator=OUT2 NewDesignator=P4
+Added Component: Designator=*(Á¢Öù¿×)
+Added Member To Class: ClassName=Sheet2 Member=Component * Á¢Öù¿×
+Added Member To Class: ClassName=Sheet2 Member=Component P0 ¶Ë¿Ú3p
+Added Room: Name=Sheet2

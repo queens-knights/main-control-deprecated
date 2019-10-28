@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=NetCAP  22PF_3 Pin=CAP  22PF-3
+Removed Pin From Net: NetName=NetCAP  22PF_3 Pin=D5-1
+Removed Pin From Net: NetName=NetCAP  22PF_3 Pin=D6-2
+Removed Pin From Net: NetName=NetCAP  22PF_3 Pin=OUT2-0
+Change Component Designator: OldDesignator= NewDesignator=大功率
+Added Component: Designator=D7(SMA(DO-214AC)_S2)
+Added Pin To Net: NetName=NetD5_2 Pin=CAP  22PF-3
+Added Pin To Net: NetName=NetD5_2 Pin=D6-2
+Added Pin To Net: NetName=NetCAP  22PF_3 Pin=D5-1
+Added Pin To Net: NetName=NetD5_2 Pin=D5-2
+Change Net Name : Old Net Name=NetCAP  22PF_3 New Net Name=NetD1_2
+Change Net Name : Old Net Name=NetD5_2 New Net Name=NetCAP  22PF_3
+Added Pin To Net: NetName=NetD5_1 Pin=D5-1
+Added Pin To Net: NetName=NetD5_1 Pin=OUT2-0
+Added Net: Name=NetD5_1
+Added Member To Class: ClassName=Sheet2 Member=Component D7 SS54
+Added Member To Class: ClassName=Sheet2 Member=Component 大功率 R
+Added Room: Name=Sheet2

@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=NetD5_1 Pin=D5-1
+Removed Pin From Net: NetName=NetCAP  22nF_3 Pin=D5-2
+Removed Pin From Net: NetName=GND Pin=D6-1
+Removed Pin From Net: NetName=NetCAP  22nF_3 Pin=D6-2
+Removed Pin From Net: NetName=24V Pin=D7-1
+Removed Pin From Net: NetName=NetCAP  22nF_3 Pin=D7-2
+Removed Pin From Net: NetName=NetD5_1 Pin=D8-1
+Removed Pin From Net: NetName=NetCAP  22nF_3 Pin=D8-2
+Removed Pin From Net: NetName=GND Pin=大功率-0
+Removed Member From Class: ClassName=Sheet2 Member=D5
+Removed Member From Class: ClassName=Sheet2 Member=D7
+Removed Member From Class: ClassName=Sheet2 Member=D8
+Added Component: Designator=Q1(TO-252)
+Added Pin To Net: NetName=NetCAP  22nF_3 Pin=D6-1
+Added Pin To Net: NetName=NetCAP  22nF_3 Pin=Q1-1
+Added Pin To Net: NetName=24V Pin=Q1-2
+Added Pin To Net: NetName=NetD5_1 Pin=Q1-3
+Change Net Name : Old Net Name=NetD5_1 New Net Name=NetOUT2_0
+Added Pin To Net: NetName=NetD6_2 Pin=D6-2
+Added Pin To Net: NetName=NetD6_2 Pin=大功率-0
+Added Net: Name=NetD6_2
+Added Member To Class: ClassName=Sheet2 Member=Component Q1 MOSFET-P
+Added Room: Name=Sheet2
