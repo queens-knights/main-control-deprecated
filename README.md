@@ -6,7 +6,12 @@ Most contents of this repository is in the wiki section.
 
 # Announcements
 
-Not really for now. Keep scrolling
+Rules Manual just got updated!
+
+[English Ver.](https://www.robomaster.com/en-US/resource/pages/1039?djifrom=robo-rm) 
+
+[Chinese Ver.](https://www.robomaster.com/zh-CN/resource/pages/1038?djifrom=robo-rm)
+
 
 # Introduction
 
