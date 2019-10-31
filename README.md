@@ -1,5 +1,5 @@
 # QRM Wiki
-This reporitory contain English documentation of Queen's Robomaster ES documentations. 
+Alola! This reporitory contain English documentation of Queen's Robomaster ES documentations. 
 
 Most contents of this repository is in the wiki section.
  [Let's go pikachu!](https://github.com/sikaxn/QRMWiki/wiki).
