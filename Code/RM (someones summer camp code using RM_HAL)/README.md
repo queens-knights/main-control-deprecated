@@ -1,3 +1,7 @@
+# These readme have a lot of bullshit, read the code!!!!!
+
+also, RM_HAL is well documented and function is clear.
+
 # 关于RM夏令营机器人的技术报告大纲 (14组) 
 
 组员及分工：
