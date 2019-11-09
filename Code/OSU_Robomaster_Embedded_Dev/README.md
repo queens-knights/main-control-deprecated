@@ -1,3 +1,12 @@
+# Notes:
+
+First of all, thanks OSU for open their entire git repostitory up.
+
+Second, this is a lot of code to read.
+
+
+# Origional README
+
 July 24, 2019
 完成底盘1秒内斜波缓速启动及停止，WASD互不干扰稳定性修复，底盘功率限制方案α
 
