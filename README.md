@@ -4,6 +4,14 @@ Alola! This reporitory contain English documentation of Queen's Robomaster ES do
 Most contents of this repository is in the wiki section.
  [Let's go pikachu!](https://github.com/sikaxn/QRMWiki/wiki).
 
+# Cloning this reporitory
+
+If you do plan cloning this repo, it will be at least 5.5G! Be prepared.
+
+You could read the wiki section first before deciding what to clone.
+
+There will be plan to reduce the size of this git repository.
+
 # Announcements
 
 Rules Manual just got updated!
