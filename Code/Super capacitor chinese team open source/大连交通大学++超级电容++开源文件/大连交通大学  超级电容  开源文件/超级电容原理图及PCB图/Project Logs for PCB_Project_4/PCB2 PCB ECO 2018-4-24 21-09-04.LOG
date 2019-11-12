@@ -1,7 +1,0 @@
-Change Component Designator: OldDesignator= NewDesignator=´ó¹¦ÂÊ
-Change Component Designator: OldDesignator=CAP 22PF NewDesignator=CAP  22PF
-Added Pin To Net: NetName=NetQ4_2 Pin=Q4-B
-Added Pin To Net: NetName=NetQ3_2 Pin=Q4-C
-Added Pin To Net: NetName=NetD3_2 Pin=Q4-E
-Change Net Name : Old Net Name=NetQ4_2 New Net Name=NetQ4_B
-Added Room: Name=Sheet2

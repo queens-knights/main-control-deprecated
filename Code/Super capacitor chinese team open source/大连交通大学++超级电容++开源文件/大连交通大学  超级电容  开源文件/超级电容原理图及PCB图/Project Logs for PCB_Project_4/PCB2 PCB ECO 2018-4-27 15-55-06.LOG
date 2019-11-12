@@ -1,6 +1,0 @@
-Change Component Comment : Designator= Old Comment=R New Comment=5w 300R
-Change Component Designator: OldDesignator= NewDesignator=´ó¹¦ÂÊ
-Change Component Designator: OldDesignator=CAP 22PF NewDesignator=CAP  22nF
-Change Net Name : Old Net Name=NetCAP  22PF_2 New Net Name=NetCAP  22nF_2
-Change Net Name : Old Net Name=NetCAP  22PF_3 New Net Name=NetCAP  22nF_3
-Added Room: Name=Sheet2

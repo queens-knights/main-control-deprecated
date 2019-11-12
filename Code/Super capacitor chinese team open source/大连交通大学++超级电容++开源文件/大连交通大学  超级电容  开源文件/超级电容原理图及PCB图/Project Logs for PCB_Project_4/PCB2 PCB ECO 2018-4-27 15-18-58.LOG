@@ -1,7 +1,0 @@
-Removed Pin From Net: NetName=NetD1_2 Pin=D5-1
-Added Component: Designator=D7(SMA(DO-214AC)_S2)
-Added Pin To Net: NetName=NetD5_1 Pin=D5-1
-Added Pin To Net: NetName=NetD1_2 Pin=D5-1
-Added Pin To Net: NetName=NetCAP  22PF_3 Pin=D5-2
-Added Member To Class: ClassName=Sheet2 Member=Component D7 SS54
-Added Room: Name=Sheet2
