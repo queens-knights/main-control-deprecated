@@ -14,12 +14,7 @@ There will be plan to reduce the size of this git repository.
 
 # Announcements
 
-Rules Manual just got updated!
-
-[English Ver.](https://www.robomaster.com/en-US/resource/pages/1039?djifrom=robo-rm) 
-
-[Chinese Ver.](https://www.robomaster.com/zh-CN/resource/pages/1038?djifrom=robo-rm)
-
+Some less used content has been moved to another repo, called QRMArchive. If you need access please send to slack. This will reduce the size of this git repo.
 
 # Introduction
 
