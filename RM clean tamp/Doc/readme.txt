@@ -1,33 +1,47 @@
 
-/*********************************使用前必读***********************************
+/*********************************readme***********************************
  *
- * 此版本为基于 rm_hal_lib 1.2v 版本构建的步兵代码
+ * This code is based on rm_hal_lib 1.2v 
  *
- * 注意事项：
+ * notes:
  * 
  * 1、在启动时，电调会进行初始化报警，这个时候陀螺仪也在进行初始化，务必保持
  *    底盘和云台在静止状态，禁止人为扰动，初始化完毕后所有报警声会消除，同时
- *    云台会自动回中。如果在启动时云台受到了干扰，请重新上电重启机器人。
+ *    云台会自动回中。如果在启动时云台受到了干扰，请重新上电重启机器人.
+ 
+ 1. When starting, ESC and IMU is init. Please keep robot stead after warning sound gone.
+ If you accidently interrupted the init, restart the robot.
  * 
  * 2、在进行debug 调试状态时，务必断掉 j-link 下载接口对主控板的供电，使用电池对
  *    整个步兵机器人进行供电和调试。
+ 
+ 2. When debugging, do not feed dev board using jlink. please use external battery
+ (use battery or turn on robot)
  * 
  * 3、为了防止正反馈的情况出现，云台的 pitch 轴电机尽量安装在右侧，如果要安装在
  *    左侧需要自己修改程序中的 pitch 轴控制方向
  *
+ 
+ 3. it is recommanded that pitch roll on right side. if not, it needs to be reversed on code.
+ 
  * 4、拨弹电机电调为 C610，第一次使用前需要长按电调按钮校准电机
+ 4. Feeder wheel motor using C610. first time use please long hold buttom to calibrate.
  * 
  * 5、如果需要调试，在 keil 工程中的 debug 选项选择 JLINK 设备，设备接口选择 SW
- *
+ *5. switch to SW mode for linker. 
+ 
+ 
+ Programming related
  * 编程相关：
- *
+ * RM_HAL_LIB.H has all introduction of ports define. 
  * 1、硬件相关驱动函数和相关端口号都在 rm_hal_lib.h 文件中有详细介绍，使用时请
  *    先熟悉相关函数，以及各种硬件端口在开发板上对应的位置
- *
+ * Use UTF8 so chinese characters dont fucked up
  * 2、为了支持中文字符和注释，所有新建文件请使用UTF-8格式
- * 
+ * sys.h has config info
  * 3、sys.h文件包含了整个步兵车系统的配置参数，可以按照需求更改相应参数
- * 例如：
+ * 例如：for example
+	change shoot speed using SHOT_FRIC_WHEEL_SPEED
  * 修改弹丸的发射速度，只需要将SHOT_FRIC_WHEEL_SPEED后面的数字改大即可
  * 
 *******************************************************************************/
