@@ -21,20 +21,33 @@ Target DLL:      Segger\JL2CM3.dll V2.99.18.0
 Dialog DLL:      TCM.DLL V1.14.8.0
  
 <h2>Project:</h2>
-C:\Users\Fennekin\Desktop\RM clean tamp\Project\rm_infantry.uvprojx
+C:\Users\Fennekin\Documents\GitHub\QRMWiki\RM clean tamp\Project\rm_infantry.uvprojx
 Project File Date:  11/12/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 1 (build 61)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'rm_infantry'
-compiling RGB_Task.c...
+compiling blink_task.c...
+blink_task.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+blink_task.c(78): warning:  #1-D: last line of file ends without a newline
+  }
+blink_task.c(20): warning:  #177-D: variable "a" was declared but never referenced
+  	uint8_t a=0,b=0,c=0,d=0;
+blink_task.c(20): warning:  #177-D: variable "b" was declared but never referenced
+  	uint8_t a=0,b=0,c=0,d=0;
+blink_task.c(20): warning:  #177-D: variable "c" was declared but never referenced
+  	uint8_t a=0,b=0,c=0,d=0;
+blink_task.c(20): warning:  #177-D: variable "d" was declared but never referenced
+  	uint8_t a=0,b=0,c=0,d=0;
+blink_task.c: 6 warnings, 0 errors
 linking...
-Program Size: Code=39548 RO-data=864 RW-data=284 ZI-data=23692  
+Program Size: Code=39688 RO-data=868 RW-data=300 ZI-data=23708  
 FromELF: creating hex file...
-".\rm_infantry\rm_infantry.axf" - 0 Error(s), 0 Warning(s).
+".\rm_infantry\rm_infantry.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
-  C:\Users\Fennekin\Desktop\RM clean tamp\Project\RTE
+  C:\Users\Fennekin\Documents\GitHub\QRMWiki\RM clean tamp\Project\RTE
   C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>

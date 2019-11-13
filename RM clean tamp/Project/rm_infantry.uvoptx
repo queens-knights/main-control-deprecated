@@ -154,7 +154,6 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
-          <Name></Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -283,6 +282,11 @@
           <count>18</count>
           <WinNumber>1</WinNumber>
           <ItemText>read_key_io</ItemText>
+        </Ww>
+        <Ww>
+          <count>19</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>usart3_recv</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
