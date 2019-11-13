@@ -12,6 +12,8 @@ You could read the wiki section first before deciding what to clone.
 
 There will be plan to reduce the size of this git repository.
 
+To be able to clone this repo, you needs to use your authrized account when signing in. 
+
 ```
 git clone https://github.com/sikaxn/QRMWiki.git
 ```
