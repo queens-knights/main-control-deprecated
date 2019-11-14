@@ -1,7 +1,7 @@
 Dependencies for Project 'rm_infantry', Target 'rm_infantry': (DO NOT MODIFY !)
 F (..\User\driver\can_device.c)(0x5DCA3FAC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Inc\hal_inc -I ..\Inc\m3_inc -I ..\Inc\os_inc -I ..\Inc\hal_inc\Legacy -I ..\User -I ..\User\algorithm -I ..\User\app -I ..\User\driver -I ..\Project --C99-I "C:\Users\Fennekin\Documents\GitHub\QRMWiki\RM clean tamp\Project\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o .\rm_infantry\can_device.o --omf_browse .\rm_infantry\can_device.crf --depend .\rm_infantry\can_device.d)
 I (..\User\driver\can_device.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\Inc\hal_inc\stm32f4xx_hal.h)(0x5DCA3FAC)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x5DCA3FAC)
 I (..\Inc\main.h)(0x5DCA3FAC)
@@ -40,7 +40,7 @@ I (..\User\app\detect_task.h)(0x5DCA3FAC)
 I (..\User\sys.h)(0x5DCA3FAC)
 F (..\User\driver\uart_device.c)(0x5DCA3FAC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Inc\hal_inc -I ..\Inc\m3_inc -I ..\Inc\os_inc -I ..\Inc\hal_inc\Legacy -I ..\User -I ..\User\algorithm -I ..\User\app -I ..\User\driver -I ..\Project --C99-I "C:\Users\Fennekin\Documents\GitHub\QRMWiki\RM clean tamp\Project\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o .\rm_infantry\uart_device.o --omf_browse .\rm_infantry\uart_device.crf --depend .\rm_infantry\uart_device.d)
 I (..\User\driver\uart_device.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\Inc\hal_inc\stm32f4xx_hal.h)(0x5DCA3FAC)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x5DCA3FAC)
 I (..\Inc\main.h)(0x5DCA3FAC)
@@ -80,7 +80,7 @@ I (..\User\sys.h)(0x5DCA3FAC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569E92FA)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x569E92FA)
 F (..\User\driver\calibrate.c)(0x5DCA3FAC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Inc\hal_inc -I ..\Inc\m3_inc -I ..\Inc\os_inc -I ..\Inc\hal_inc\Legacy -I ..\User -I ..\User\algorithm -I ..\User\app -I ..\User\driver -I ..\Project --C99-I "C:\Users\Fennekin\Documents\GitHub\QRMWiki\RM clean tamp\Project\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o .\rm_infantry\calibrate.o --omf_browse .\rm_infantry\calibrate.crf --depend .\rm_infantry\calibrate.d)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\Inc\hal_inc\stm32f4xx_hal.h)(0x5DCA3FAC)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x5DCA3FAC)
 I (..\Inc\main.h)(0x5DCA3FAC)
@@ -154,10 +154,10 @@ I (..\Inc\hal_inc\stm32f4xx_hal_tim.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim_ex.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_uart.h)(0x5DCA3FAC)
 I (..\User\driver\uart_device.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\User\app\gimbal_task.h)(0x5DCA3FAC)
 I (..\User\sys.h)(0x5DCA3FAC)
-F (..\User\rm_hal_lib.h)(0x5DCBA15D)()
+F (..\User\rm_hal_lib.h)(0x5DCBB24D)()
 F (..\User\algorithm\pid.c)(0x5DCA3FAC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Inc\hal_inc -I ..\Inc\m3_inc -I ..\Inc\os_inc -I ..\Inc\hal_inc\Legacy -I ..\User -I ..\User\algorithm -I ..\User\app -I ..\User\driver -I ..\Project --C99-I "C:\Users\Fennekin\Documents\GitHub\QRMWiki\RM clean tamp\Project\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o .\rm_infantry\pid.o --omf_browse .\rm_infantry\pid.crf --depend .\rm_infantry\pid.d)
 I (..\User\algorithm\pid.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal.h)(0x5DCA3FAC)
@@ -231,8 +231,8 @@ I (..\Inc\hal_inc\stm32f4xx_hal_tim.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim_ex.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_uart.h)(0x5DCA3FAC)
 F (..\User\startup.c)(0x5DCB8469)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Inc\hal_inc -I ..\Inc\m3_inc -I ..\Inc\os_inc -I ..\Inc\hal_inc\Legacy -I ..\User -I ..\User\algorithm -I ..\User\app -I ..\User\driver -I ..\Project --C99-I "C:\Users\Fennekin\Documents\GitHub\QRMWiki\RM clean tamp\Project\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o .\rm_infantry\startup.o --omf_browse .\rm_infantry\startup.crf --depend .\rm_infantry\startup.d)
-I (..\User\startup.h)(0x5DCB8BBB)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\startup.h)(0x5DCCD4AF)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\Inc\hal_inc\stm32f4xx_hal.h)(0x5DCA3FAC)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x5DCA3FAC)
 I (..\Inc\main.h)(0x5DCA3FAC)
@@ -329,7 +329,7 @@ I (..\Inc\hal_inc\stm32f4xx_hal_spi.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim_ex.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_uart.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\User\app\chassis_task.h)(0x5DCA3FAC)
 I (..\User\app\detect_task.h)(0x5DCA3FAC)
 I (..\User\driver\can_device.h)(0x5DCA3FAC)
@@ -393,7 +393,7 @@ I (..\Inc\hal_inc\stm32f4xx_hal_tim.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim_ex.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_uart.h)(0x5DCA3FAC)
 I (..\User\sys.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\Inc\os_inc\cmsis_os.h)(0x5DCA3FAC)
 I (..\Inc\os_inc\FreeRTOS.h)(0x5DCA3FAC)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x569E92FA)
@@ -447,7 +447,7 @@ I (..\Inc\hal_inc\stm32f4xx_hal_tim_ex.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_uart.h)(0x5DCA3FAC)
 I (..\User\app\detect_task.h)(0x5DCA3FAC)
 I (..\User\app\gimbal_task.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\User\driver\can_device.h)(0x5DCA3FAC)
 I (..\User\driver\uart_device.h)(0x5DCA3FAC)
 I (..\User\driver\keyboard.h)(0x5DCA3FAC)
@@ -508,7 +508,7 @@ I (..\Inc\hal_inc\stm32f4xx_hal_tim.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim_ex.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_uart.h)(0x5DCA3FAC)
 I (..\User\driver\can_device.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\User\driver\uart_device.h)(0x5DCA3FAC)
 I (..\Inc\os_inc\cmsis_os.h)(0x5DCA3FAC)
 I (..\Inc\os_inc\FreeRTOS.h)(0x5DCA3FAC)
@@ -530,7 +530,7 @@ I (..\User\algorithm\pid.h)(0x5DCA3FAC)
 I (..\User\sys.h)(0x5DCA3FAC)
 F (..\User\app\arm_task.c)(0x5DCA3FAC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Inc\hal_inc -I ..\Inc\m3_inc -I ..\Inc\os_inc -I ..\Inc\hal_inc\Legacy -I ..\User -I ..\User\algorithm -I ..\User\app -I ..\User\driver -I ..\Project --C99-I "C:\Users\Fennekin\Documents\GitHub\QRMWiki\RM clean tamp\Project\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o .\rm_infantry\arm_task.o --omf_browse .\rm_infantry\arm_task.crf --depend .\rm_infantry\arm_task.d)
 I (..\User\driver\can_device.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\Inc\hal_inc\stm32f4xx_hal.h)(0x5DCA3FAC)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x5DCA3FAC)
 I (..\Inc\main.h)(0x5DCA3FAC)
@@ -609,7 +609,7 @@ I (..\Inc\os_inc\queue.h)(0x5DCA3FAC)
 I (..\Inc\os_inc\semphr.h)(0x5DCA3FAC)
 I (..\Inc\os_inc\event_groups.h)(0x5DCA3FAC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569E92FA)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\Inc\hal_inc\stm32f4xx_hal.h)(0x5DCA3FAC)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_rcc.h)(0x5DCA3FAC)
@@ -662,7 +662,7 @@ I (..\Inc\os_inc\queue.h)(0x5DCA3FAC)
 I (..\Inc\os_inc\semphr.h)(0x5DCA3FAC)
 I (..\Inc\os_inc\event_groups.h)(0x5DCA3FAC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569E92FA)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\Inc\hal_inc\stm32f4xx_hal.h)(0x5DCA3FAC)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_rcc.h)(0x5DCA3FAC)
@@ -733,7 +733,7 @@ I (..\Inc\hal_inc\stm32f4xx_hal_tim.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim_ex.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_uart.h)(0x5DCA3FAC)
 I (..\User\app\gimbal_task.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\User\driver\can_device.h)(0x5DCA3FAC)
 I (..\User\driver\uart_device.h)(0x5DCA3FAC)
 I (..\User\driver\keyboard.h)(0x5DCA3FAC)
@@ -778,7 +778,7 @@ I (..\Inc\hal_inc\stm32f4xx_hal_spi.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim_ex.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_uart.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\User\driver\can_device.h)(0x5DCA3FAC)
 I (..\User\driver\uart_device.h)(0x5DCA3FAC)
 I (..\User\algorithm\pid.h)(0x5DCA3FAC)
@@ -819,7 +819,7 @@ I (..\Inc\hal_inc\stm32f4xx_hal_spi.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim_ex.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_uart.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\User\driver\can_device.h)(0x5DCA3FAC)
 I (..\User\algorithm\pid.h)(0x5DCA3FAC)
 I (..\User\sys.h)(0x5DCA3FAC)
@@ -861,13 +861,13 @@ I (..\Inc\hal_inc\stm32f4xx_hal_tim.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_tim_ex.h)(0x5DCA3FAC)
 I (..\Inc\hal_inc\stm32f4xx_hal_uart.h)(0x5DCA3FAC)
 I (..\User\driver\can_device.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\User\driver\uart_device.h)(0x5DCA3FAC)
 I (..\User\algorithm\pid.h)(0x5DCA3FAC)
 I (..\User\sys.h)(0x5DCA3FAC)
 F (.\arm.c)(0x5DCA3FAC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Inc\hal_inc -I ..\Inc\m3_inc -I ..\Inc\os_inc -I ..\Inc\hal_inc\Legacy -I ..\User -I ..\User\algorithm -I ..\User\app -I ..\User\driver -I ..\Project --C99-I "C:\Users\Fennekin\Documents\GitHub\QRMWiki\RM clean tamp\Project\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o .\rm_infantry\arm.o --omf_browse .\rm_infantry\arm.crf --depend .\rm_infantry\arm.d)
 I (..\User\driver\can_device.h)(0x5DCA3FAC)
-I (..\User\rm_hal_lib.h)(0x5DCBA15D)
+I (..\User\rm_hal_lib.h)(0x5DCBB24D)
 I (..\Inc\hal_inc\stm32f4xx_hal.h)(0x5DCA3FAC)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x5DCA3FAC)
 I (..\Inc\main.h)(0x5DCA3FAC)

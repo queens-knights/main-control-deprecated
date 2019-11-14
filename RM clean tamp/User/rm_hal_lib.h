@@ -116,7 +116,7 @@ void can_receive_start(void);
 #define USER_UART2        2 //用户串口2
 #define USER_UART3        3 //用户串口3
 #define USER_UART4        4 //用户串口4
-                      #define USER_UART5        5 //用户串口5，用于和官方上位机通信
+#define USER_UART5        5 //用户串口5，用于和官方上位机通信
 //UART 设备相关函数
 /**
   * @brief     UART 设备初始化
