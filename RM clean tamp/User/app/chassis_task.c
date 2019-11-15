@@ -117,11 +117,10 @@ uint32_t twist_count;
 void get_chassis_mode(void)
 {
   chassis.last_mode = chassis.mode;
-  
-  switch (rc.sw2)
+/*  switch (rc.sw2)
   {
     case RC_UP:
-       chassis.mode = CHASSIS_OPEN_LOOP;
+       chassis.mode = CHASSIS_FOLLOW_GIMBAL;
 		//	chassis.mode = CHASSIS_OPEN_LOOP;//Open loop anyway.
     break;
     
@@ -130,32 +129,32 @@ void get_chassis_mode(void)
     break;
 
     case RC_DN:
-      chassis.mode = CHASSIS_OPEN_LOOP ;
+      chassis.mode = CHASSIS_TWIST ;
 			//chassis.mode = CHASSIS_OPEN_LOOP;//Open loop anyway.
+    break;
+  }*/
+  
+ switch (rc.sw1)
+  {
+    case RC_UP: //user custom function
+   break;
+    
+   case RC_MI: //user custom function
+    break;
+
+    case RC_DN:
+    {
+      if (chassis.mode == CHASSIS_FOLLOW_GIMBAL)
+        chassis.mode = CHASSIS_TWIST;
+    }
     break;
   }
   
-//  switch (rc.sw1)
-//  {
-//    case RC_UP: //user custom function
-//    break;
-//    
-//    case RC_MI: //user custom function
-//    break;
-
-//    case RC_DN:
-//    {
-//      if (chassis.mode == CHASSIS_FOLLOW_GIMBAL)
-//        chassis.mode = CHASSIS_TWIST;
-//    }
-//    break;
-//  }
-//  
-//  if (rc.sw2 == RC_DN)
-//    chassis.mode = CHASSIS_STOP;
-//  
-//  if (chassis.mode != CHASSIS_TWIST)
-//    twist_count = 0;
+  if (rc.sw2 == RC_DN)
+    chassis.mode = CHASSIS_STOP;
+  
+  if (chassis.mode != CHASSIS_TWIST)
+    twist_count = 0;
   
 }
 /**
