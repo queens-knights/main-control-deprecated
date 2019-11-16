@@ -5,7 +5,7 @@
 #include "blink_task.h"
 int usart3_recv[4];
 int a=0,b=0,c=0,d=0;
-
+/*
 
 	void UART3_callback(void){
 		a = usart3_recv[0];
@@ -13,16 +13,16 @@ int a=0,b=0,c=0,d=0;
 		c = usart3_recv[2];
 		d = usart3_recv[3];
 	}
-
+*/
 void blink_task(const void* argu)
-{
+{/*
 	uint8_t usart3_recv[12];
 	uint8_t a=0,b=0,c=0,d=0;
 	uart_init(USER_UART3,9600,WORD_LEN_8B,STOP_BITS_1,PARITY_NONE);
 	uart_recv_callback_register(USER_UART3,UART3_callback);
 	uart_receive_start(USER_UART3,usart3_recv,4);
 
-	
+	*/
 	
 	while(1)
 	{

@@ -465,6 +465,11 @@
               <FileType>1</FileType>
               <FilePath>.\RGB_Task.c</FilePath>
             </File>
+            <File>
+              <FileName>study_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\study_task.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

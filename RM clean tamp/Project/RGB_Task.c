@@ -25,6 +25,9 @@ void RGB11_task(const void* argu)
 			osDelay(200);
 			write_led_io(LED_R,LED_OFF);
 			osDelay(200);
+			write_led_io(LASER_IO,LED_ON);
+			osDelay(200);
+			write_led_io(LASER_IO,LED_OFF);
 			}
 		else
 		{
