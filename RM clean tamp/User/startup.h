@@ -49,8 +49,8 @@
 //#define USER_TASK2 RGB11_task
 #define USER_TASK1 chassis_task
 #define USER_TASK2 arm_task
-//#define USER_TASK3 detect_task
-//#define USER_TASK4 execute_task
+#define USER_TASK3 detect_task
+#define USER_TASK4 execute_task
 //#define USER_TASK5
 
 /**
