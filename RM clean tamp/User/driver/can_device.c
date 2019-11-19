@@ -85,8 +85,8 @@ void can1_recv_callback(uint32_t recv_id, uint8_t data[])
     break;
     case CAN_3508_M5_ID:
     {
-      encoder_data_handle(&moto_arm, data);
-      //err_detector_hook(GIMBAL_YAW_OFFLINE);
+      encoder_data_handle(&moto_yaw, data);
+      err_detector_hook(GIMBAL_YAW_OFFLINE);
     }
     break;
     case CAN_3508_M6_ID:

@@ -1,3 +1,6 @@
+//THIS PART IS SUMMER CAMP DUDE WRITE, USELESS, DISABLED.
+
+
 #include "execute_task.h"
 #include "can_device.h"
 #include "uart_device.h"

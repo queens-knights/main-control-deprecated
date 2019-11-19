@@ -412,21 +412,21 @@ void gimbal_init_param(void)
   osDelay(3000);
   
   /* 云台pitch轴电机PID参数初始化 */
-  pid_init(&pid_pit, 2000, 0,
+  pid_init(&pid_pit, 1, 0,
                   30, 0, 0); //
-  pid_init(&pid_pit_speed, 5000, 2000,
+  pid_init(&pid_pit_speed, 1, 2000,
                   20, 0.1, 0);
 
   /* 云台yaw轴电机PID参数初始化 */
-  pid_init(&pid_yaw, 2000, 0,
+  pid_init(&pid_yaw, 1, 0,
                   25, 0, 0); //
-  pid_init(&pid_yaw_speed, 5000, 800,
+  pid_init(&pid_yaw_speed, 1, 800,
                   20, 0, 0);
 
   /* 拨弹电机PID参数初始化 */
-  pid_init(&pid_trigger, 4000, 2000,
+  pid_init(&pid_trigger, 1, 2000,
                   0.15f, 0, 0);
-  pid_init(&pid_trigger_speed, 8000, 4000,
+  pid_init(&pid_trigger_speed, 1, 4000,
                   1.5, 0.05, 0);
 
   /* 将云台的初始化状态设置为释放 */
