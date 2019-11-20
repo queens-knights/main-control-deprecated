@@ -24,6 +24,7 @@ int _delay=0;
 
 #include "can_device.h"
 
+
 int16_t mCurrent[1];
 
 void execute_task(const void* argu)

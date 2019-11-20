@@ -315,9 +315,9 @@ void gimbal_loop_handle(void)
   static float chassis_angle_tmp;
   
   pit_angle_fdb = pit_relative_angle;
-  yaw_angle_fdb = imu.angle_z - gim.yaw_offset_angle;
+  yaw_angle_fdb = /*imu.angle_z -*/ gim.yaw_offset_angle;
   
-  chassis_angle_tmp = yaw_angle_fdb - yaw_relative_angle;
+  //chassis_angle_tmp = yaw_angle_fdb - yaw_relative_angle;
   if (chassis.mode != CHASSIS_FIXED_ROUTE)
   {
     //限制yaw轴的活动角度

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\rm_infantry\rm_infantry.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\rm_infantry\rm_infantry.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Tue Nov 19 17:42:43 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Tue Nov 19 21:47:12 2019
 <BR><P>
 <H3>Maximum Stack Usage =        280 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -744,8 +744,8 @@ Global Symbols
 <P><STRONG><a name="[99]"></a>HAL_ADC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, stm32f4xx_hal_adc.o(i.HAL_ADC_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = HAL_ADC_Init &rArr; HAL_ADC_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
@@ -939,12 +939,12 @@ Global Symbols
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_WaitForLastOperation
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;imu_AHRS_update
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_EnableOverDrive
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterInitMode
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_WaitForSynchro
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTCEx_SetWakeUpTimer
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
 </UL>
 
 <P><STRONG><a name="[e6]"></a>HAL_IncTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_IncTick))
@@ -1463,8 +1463,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1475,8 +1475,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1487,8 +1487,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1499,8 +1499,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1511,9 +1511,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_ConfigBreakDeadTime
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1612,9 +1612,9 @@ Global Symbols
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_CLKSourceConfig
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_EnableOverDrive
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_CLKSourceConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -3078,7 +3078,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gimbal_task
 </UL>
 
-<P><STRONG><a name="[15e]"></a>gimbal_loop_handle</STRONG> (Thumb, 310 bytes, Stack size 8 bytes, gimbal_task.o(i.gimbal_loop_handle))
+<P><STRONG><a name="[15e]"></a>gimbal_loop_handle</STRONG> (Thumb, 280 bytes, Stack size 8 bytes, gimbal_task.o(i.gimbal_loop_handle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = gimbal_loop_handle
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gimbal_yaw_control

@@ -154,6 +154,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
+          <Name></Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -307,6 +308,81 @@
           <count>23</count>
           <WinNumber>1</WinNumber>
           <ItemText>pit_relative_angle</ItemText>
+        </Ww>
+        <Ww>
+          <count>24</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pid</ItemText>
+        </Ww>
+        <Ww>
+          <count>25</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>yaw_speed_ref</ItemText>
+        </Ww>
+        <Ww>
+          <count>26</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>gim.ctrl_mode</ItemText>
+        </Ww>
+        <Ww>
+          <count>27</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>imu</ItemText>
+        </Ww>
+        <Ww>
+          <count>28</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>gim.ac_mode</ItemText>
+        </Ww>
+        <Ww>
+          <count>29</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>yaw_relative_angle</ItemText>
+        </Ww>
+        <Ww>
+          <count>30</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pid_pit</ItemText>
+        </Ww>
+        <Ww>
+          <count>31</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pid_pit_speed</ItemText>
+        </Ww>
+        <Ww>
+          <count>32</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pid_yaw_speed</ItemText>
+        </Ww>
+        <Ww>
+          <count>33</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pit_moto_current</ItemText>
+        </Ww>
+        <Ww>
+          <count>34</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pit_angle_ref</ItemText>
+        </Ww>
+        <Ww>
+          <count>35</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pit_angle_fdb</ItemText>
+        </Ww>
+        <Ww>
+          <count>36</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pit_relative_angle</ItemText>
+        </Ww>
+        <Ww>
+          <count>37</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>PIT_ANGLE_MIN</ItemText>
+        </Ww>
+        <Ww>
+          <count>38</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>chassis_angle_tmp</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
