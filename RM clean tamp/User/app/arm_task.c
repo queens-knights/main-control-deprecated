@@ -1,3 +1,5 @@
+//THIS PART IS SUMMER CAMP DUDE WRITE, USELESS, DISABLED.
+
 #include "can_device.h"
 #include "uart_device.h"
 #include "keyboard.h"
