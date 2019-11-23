@@ -475,6 +475,11 @@
               <FileType>1</FileType>
               <FilePath>.\relay_task.c</FilePath>
             </File>
+            <File>
+              <FileName>pwm_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\pwm_task.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
