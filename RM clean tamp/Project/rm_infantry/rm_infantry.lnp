@@ -14,6 +14,7 @@
 ".\rm_infantry\blink_task.o"
 ".\rm_infantry\rgb_task.o"
 ".\rm_infantry\study_task.o"
+".\rm_infantry\relay_task.o"
 ".\rm_infantry\chassis_custom.o"
 ".\rm_infantry\gimbal_custom.o"
 ".\rm_infantry\shoot_custom.o"

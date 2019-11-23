@@ -39,17 +39,18 @@
 #include "arm_task.h"
 #include "blink_task.h"
 #include "RGB_task.h"
-
+#include "relay_task.h"
 
 /**
   * @brief     最多支持 5 个任务函数的配置和开启
   * @usage     首先开启 USER_TASKx 的宏定义，然后在 USER_TASKx 后添加需要开启的任务函数名
   */
+#define USER_TASK1 relay_task
 //#define USER_TASK1 blink_task
 //#define USER_TASK2 RGB11_task
-#define USER_TASK1 chassis_task
-#define USER_TASK2 gimbal_task
-#define USER_TASK3 detect_task
+//#define USER_TASK1 chassis_task
+//#define USER_TASK2 gimbal_task
+//#define USER_TASK3 detect_task
 //#define USER_TASK4 execute_task
 //#define USER_TASK5
 

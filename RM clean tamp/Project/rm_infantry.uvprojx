@@ -470,6 +470,11 @@
               <FileType>1</FileType>
               <FilePath>.\study_task.c</FilePath>
             </File>
+            <File>
+              <FileName>relay_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\relay_task.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

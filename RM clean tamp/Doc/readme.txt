@@ -93,19 +93,21 @@
 *
 * 注意：
 * 按照优先级进行错误指示，例如遥控器优先级高于云台电机，如果同时发生离线，
-* 先指示当前离线设备是遥控器
+* 先指示当前离线设备是遥控器 Offline error report will use priority. For example, remote offline will first be showned on LED instead of other offline. 
+  Therefore if remote and yaw both offline, it will show remote offline. After correcrt remote offline issue it will than show yaw offline.
 * 
-* 模块离线对应的状态如下，数字对应红灯每次连续闪的次数，按照优先级排序：
-* 1：遥控器离线
-* 2：云台 yaw 轴电机离线
-* 3：云台 pitch 轴电机离线
-* 4、拨弹电机离线
-* 5、底盘电机离线，此时红灯常亮，蜂鸣器不响
+* 模块离线对应的状态如下，数字对应红灯每次连续闪的次数，按照优先级排序：When module offline, the number of red light flash will corrounspond to
+* 1：遥控器离线 Remote offline
+* 2：云台 yaw 轴电机离线 Pit offline
+* 3：云台 pitch 轴电机离线 Yaw offfline
+* 4、拨弹电机离线 Feeder wheel offline
+* 5、底盘电机离线，此时红灯常亮，蜂鸣器不响 Chassis offline (red light solid)
 *
 ********************************************************************************/
 
 /********************************板载陀螺仪坐标系*******************************
 * 开发板正面朝上，XT30 电源输入口朝前，此时右方向为 x 轴，前方向为 y 轴，z 轴方向
 * 和各轴旋转方向遵循右手坐标系
+IMU install: Face up, XT30 to front, DBUS at back, right side x, front y, z up down.
 ********************************************************************************/
 
