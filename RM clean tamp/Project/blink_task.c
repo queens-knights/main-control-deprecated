@@ -3,8 +3,8 @@
 
 #include "rm_hal_lib.h"
 #include "blink_task.h"
-int usart3_recv[4];
-int a=0,b=0,c=0,d=0;
+//int usart3_recv[4];
+//int a=0,b=0,c=0,d=0;
 /*
 
 	void UART3_callback(void){

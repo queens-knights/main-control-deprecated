@@ -137,7 +137,7 @@
         <tRSysVw>1</tRSysVw>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
-        <nTsel>11</nTsel>
+        <nTsel>6</nTsel>
         <sDll></sDll>
         <sDllPa></sDllPa>
         <sDlgDll></sDlgDll>
@@ -148,9 +148,14 @@
         <tDlgDll></tDlgDll>
         <tDlgPa></tDlgPa>
         <tIfile></tIfile>
-        <pMon>STLink\ST-LINKIII-KEIL_SWO.dll</pMon>
+        <pMon>Segger\JL2CM3.dll</pMon>
       </DebugOpt>
       <TargetDriverDllRegistry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>DLGUARM</Key>
+          <Name></Name>
+        </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>ARMRTXEVENTFLAGS</Key>
@@ -378,6 +383,31 @@
           <count>38</count>
           <WinNumber>1</WinNumber>
           <ItemText>chassis_angle_tmp</ItemText>
+        </Ww>
+        <Ww>
+          <count>39</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>aa</ItemText>
+        </Ww>
+        <Ww>
+          <count>40</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>bb</ItemText>
+        </Ww>
+        <Ww>
+          <count>41</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>cc</ItemText>
+        </Ww>
+        <Ww>
+          <count>42</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>dd</ItemText>
+        </Ww>
+        <Ww>
+          <count>43</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>usart3_recv</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
@@ -726,6 +756,18 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>20</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\ai_task.c</PathWithFileName>
+      <FilenameWithoutPath>ai_task.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
   </Group>
 
   <Group>
@@ -736,7 +778,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>20</FileNumber>
+      <FileNumber>21</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -748,7 +790,7 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>21</FileNumber>
+      <FileNumber>22</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -760,7 +802,7 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>22</FileNumber>
+      <FileNumber>23</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -772,7 +814,7 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>23</FileNumber>
+      <FileNumber>24</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -784,7 +826,7 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>24</FileNumber>
+      <FileNumber>25</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -796,7 +838,7 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>25</FileNumber>
+      <FileNumber>26</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -808,7 +850,7 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>26</FileNumber>
+      <FileNumber>27</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -828,7 +870,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>5</GroupNumber>
-      <FileNumber>27</FileNumber>
+      <FileNumber>28</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -840,7 +882,7 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
-      <FileNumber>28</FileNumber>
+      <FileNumber>29</FileNumber>
       <FileType>4</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -860,7 +902,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>6</GroupNumber>
-      <FileNumber>29</FileNumber>
+      <FileNumber>30</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
