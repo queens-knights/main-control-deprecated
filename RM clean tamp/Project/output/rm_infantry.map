@@ -213,8 +213,8 @@ Section Cross References
     relay_task.o(i.relay_task) refers to bsp_io.o(i.set_digital_io_dir) for set_digital_io_dir
     relay_task.o(i.relay_task) refers to bsp_io.o(i.write_digital_io) for write_digital_io
     relay_task.o(i.relay_task) refers to uart_device.o(.bss) for rc
-    pwm_task.o(i.pwm_task) refers to bsp_io.o(i.start_pwm_output) for start_pwm_output
     pwm_task.o(i.pwm_task) refers to bsp_io.o(i.set_pwm_group_param) for set_pwm_group_param
+    pwm_task.o(i.pwm_task) refers to bsp_io.o(i.start_pwm_output) for start_pwm_output
     pwm_task.o(i.pwm_task) refers to bsp_io.o(i.set_pwm_param) for set_pwm_param
     ai_task.o(i.USART3_callback) refers to ai_task.o(.data) for usart3_recv
     ai_task.o(i.ai_task) refers to bsp_uart.o(i.uart_init) for uart_init
@@ -1946,7 +1946,7 @@ Removing Unused input sections from the image.
     Removing pwm_task.o(.rev16_text), (4 bytes).
     Removing pwm_task.o(.revsh_text), (4 bytes).
     Removing pwm_task.o(.rrx_text), (6 bytes).
-    Removing pwm_task.o(i.pwm_task), (26 bytes).
+    Removing pwm_task.o(i.pwm_task), (30 bytes).
     Removing ai_task.o(.rev16_text), (4 bytes).
     Removing ai_task.o(.revsh_text), (4 bytes).
     Removing ai_task.o(.rrx_text), (6 bytes).
@@ -2670,7 +2670,7 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_hal_rtc_ex.o(i.HAL_RTCEx_WakeUpTimerEventCallback), (2 bytes).
     Removing stm32f4xx_hal_rtc_ex.o(i.HAL_RTCEx_WakeUpTimerIRQHandler), (64 bytes).
 
-831 unused section(s) (total 64174 bytes) removed from the image.
+831 unused section(s) (total 64178 bytes) removed from the image.
 
 ==============================================================================
 

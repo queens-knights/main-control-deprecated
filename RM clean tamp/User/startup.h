@@ -50,7 +50,7 @@
 //#define USER_TASK1 relay_task
 //#define USER_TASK2 blink_task
 #define USER_TASK2 RGB11_task
-//#define USER_TASK4 pwm_task
+//#define USER_TASK3 pwm_task
 //#define USER_TASK1 chassis_task
 //#define USER_TASK2 gimbal_task
 //#define USER_TASK3 detect_task
