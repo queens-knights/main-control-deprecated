@@ -6,7 +6,7 @@ ser = serial.Serial('/dev/ttyUSB0')
 win = Tk()
 myFont = tkFont.Font(family = 'Helvetica', size = 36, weight = 'bold')
 win.title("RM UART DEMO")
-win.geometry('800x480')
+win.geometry('30x120')
 writeto = '0000000'
 
 def TRIGCH1():

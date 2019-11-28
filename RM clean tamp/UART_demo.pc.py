@@ -5,7 +5,7 @@ import tkinter.font
 ser = serial.Serial('COM3')
 win = Tk()
 win.title("RM UART DEMO")
-win.geometry('800x480')
+win.geometry('30x120')
 writeto = '0000000'
 
 def TRIGCH1():
