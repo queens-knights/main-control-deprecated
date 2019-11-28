@@ -46,10 +46,10 @@
   * @brief     最多支持 5 个任务函数的配置和开启
   * @usage     首先开启 USER_TASKx 的宏定义，然后在 USER_TASKx 后添加需要开启的任务函数名
   */
-	#define USER_TASK1 ai_task
+ #define USER_TASK1 ai_task
 //#define USER_TASK1 relay_task
-//#define USER_TASK2 blink_task
-#define USER_TASK2 RGB11_task
+//#define USER_TASK1 blink_task
+//#define USER_TASK2 RGB11_task
 //#define USER_TASK3 pwm_task
 //#define USER_TASK1 chassis_task
 //#define USER_TASK2 gimbal_task
