@@ -97,10 +97,13 @@ void chassis_task(const void* argu)
       }break;
     }
     
-    if (chassis.mode == CHASSIS_RELAX || glb_err.err_list[REMOTE_CTRL_OFFLINE].err_exist)
+    if (chassis.mode == CHASSIS_RELAX /*|| glb_err.err_list[REMOTE_CTRL_OFFLINE].err_exist //this is disabled as it is not instant enough?? still needs to justify*/)
     {
       send_chassis_moto_zero_current();
-    }
+			
+		}
+		
+		
     else
     {
       chassis_custom_control();
@@ -117,45 +120,33 @@ uint32_t twist_count;
 void get_chassis_mode(void)
 {
   chassis.last_mode = chassis.mode;
-/*  switch (rc.sw2)
-  {
-    case RC_UP:
-       chassis.mode = CHASSIS_FOLLOW_GIMBAL;
-		//	chassis.mode = CHASSIS_OPEN_LOOP;//Open loop anyway.
-    break;
+  if(glb_err.err_id == 5)//RC offline handler
+		{chassis.mode = CHASSIS_STOP;}
+	else{
+		switch (rc.sw1)
+		{
+			case RC_UP: //user custom function
+				chassis.mode = CHASSIS_OPEN_LOOP;
+			break;
     
-    case RC_MI:
-      chassis.mode = CHASSIS_OPEN_LOOP;
-    break;
+			case RC_MI: //user custom function
+				chassis.mode = CHASSIS_STOP;
+			break;
 
-    case RC_DN:
-      chassis.mode = CHASSIS_TWIST ;
-			//chassis.mode = CHASSIS_OPEN_LOOP;//Open loop anyway.
-    break;
-  }*/
-  
- switch (rc.sw1)
-  {
-    case RC_UP: //user custom function
-   break;
-    
-   case RC_MI: //user custom function
-    break;
-
-    case RC_DN:
-    {
+			case RC_DN:
+			{
       if (chassis.mode == CHASSIS_FOLLOW_GIMBAL)
         chassis.mode = CHASSIS_TWIST;
-    }
-    break;
-  }
+			}
+			break;
+		}
   
-  if (rc.sw2 == RC_DN)
-    chassis.mode = CHASSIS_STOP;
+		if (rc.sw2 == RC_DN)
+			chassis.mode = CHASSIS_STOP;
   
-  if (chassis.mode != CHASSIS_TWIST)
-    twist_count = 0;
-  
+		if (chassis.mode != CHASSIS_TWIST)
+			twist_count = 0;
+			}
 }
 /**
   * @brief     initialize chassis motor pid parameter

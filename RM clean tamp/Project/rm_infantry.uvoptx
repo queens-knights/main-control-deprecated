@@ -409,6 +409,21 @@
           <WinNumber>1</WinNumber>
           <ItemText>usart3_recv</ItemText>
         </Ww>
+        <Ww>
+          <count>44</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>glb_err.err_list[REMOTE_CTRL_OFFLINE].err_exist</ItemText>
+        </Ww>
+        <Ww>
+          <count>45</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>glb_err</ItemText>
+        </Ww>
+        <Ww>
+          <count>46</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>glb_err.err_id</ItemText>
+        </Ww>
       </WatchWindow1>
       <WatchWindow2>
         <Ww>
