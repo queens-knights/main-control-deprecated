@@ -20,7 +20,7 @@ git clone https://github.com/sikaxn/QRMWiki.git
 
 # Announcements
 
-Some less used content has been moved to another repo, called QRMArchive. If you need access please send to slack. This will reduce the size of this git repo.
+Good Luck on exams!
 
 # Introduction
 
