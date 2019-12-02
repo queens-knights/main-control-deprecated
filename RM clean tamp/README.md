@@ -4,9 +4,9 @@ also, RM_HAL is well documented and function is clear.
 
 # Refer to wiki for ducuments.
 
-[Go To The Wiki](https://github.com/sikaxn/QRMWiki/wiki/6-Shenzhen-code)
+[Go To The Wiki](https://github.com/sikaxn/QRMWiki/wiki/5-RM-HAL-library-code)
 
-#Function status
+# Function status
 
 ## Currently working feature
 
