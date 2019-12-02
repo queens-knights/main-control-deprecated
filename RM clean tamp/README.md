@@ -4,7 +4,7 @@ also, RM_HAL is well documented and function is clear.
 
 # Refer to wiki for ducuments.
 
-
+[Go To The Wiki](https://github.com/sikaxn/QRMWiki/wiki/6-Shenzhen-code)
 
 #Function status
 
@@ -16,13 +16,12 @@ also, RM_HAL is well documented and function is clear.
 4. LED + Laser
 5. Read Motor data
 6. Write to Motor
-
+7. Chassis
+8. Safety
 
 ## Currently partally working
 
-1. Chassis
-2. UART
-3. Safety
+1. UART
 
 ## Currently not working
 
