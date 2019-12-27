@@ -20,7 +20,7 @@ git clone https://github.com/sikaxn/QRMWiki.git
 
 # Announcements
 
-Good Luck on exams!
+Happy New Year!
 
 # Introduction
 
