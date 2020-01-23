@@ -13,10 +13,10 @@
 uint8_t usart4_send[4]; //set an arry with 4 #
 uint8_t L1=0,L2=0,R1=0,R2=0;
 void USART4_pneu_callback(void){
-		L1 = usart4_send[0];
-		L2 = usart4_send[1];
-		R1 = usart4_send[2];
-		R2 = usart4_send[3];
+		usart4_send[0] = L1;
+		usart4_send[1] = L2;
+		usart4_send[2] = R1;
+		usart4_send[3] = R2;
 }
 
 void pneu_task (const void*argu){
