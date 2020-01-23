@@ -61,6 +61,7 @@
 .\rm_infantry\startup.o: ..\Project\relay_task.h
 .\rm_infantry\startup.o: ..\Project\pwm_task.h
 .\rm_infantry\startup.o: ..\Project\ai_task.h
+.\rm_infantry\startup.o: ..\Project\pneu_task.h
 .\rm_infantry\startup.o: ..\User\driver\can_device.h
 .\rm_infantry\startup.o: ..\User\driver\uart_device.h
 .\rm_infantry\startup.o: ..\User\driver\calibrate.h

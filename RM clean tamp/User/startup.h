@@ -42,6 +42,7 @@
 #include "relay_task.h"
 #include "pwm_task.h"
 #include "ai_task.h"
+#include "pneu_task.h"
 /**
   * @brief     最多支持 5 个任务函数的配置和开启
   * @usage     首先开启 USER_TASKx 的宏定义，然后在 USER_TASKx 后添加需要开启的任务函数名
@@ -51,11 +52,12 @@
 //#define USER_TASK1 blink_task
 //#define USER_TASK2 RGB11_task
 //#define USER_TASK3 pwm_task
-#define USER_TASK1 chassis_task
+//#define USER_TASK1 chassis_task
 //#define USER_TASK2 gimbal_task
-#define USER_TASK2 detect_task
+//#define USER_TASK2 detect_task
 //#define USER_TASK4 execute_task
 //#define USER_TASK5
+#define USER_TASK1 pneu_task
 
 /**
   * @brief     在任务函数执行前运行，可以用来初始化任务中用到的 IO 端口，

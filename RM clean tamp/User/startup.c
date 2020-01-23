@@ -45,14 +45,14 @@ void init_setup(void)
   write_led_io(LED_R, LED_OFF);
   
   //关闭所有 LED IO
-  write_led_io(LED_IO1, LED_OFF);
-  write_led_io(LED_IO2, LED_OFF);
-  write_led_io(LED_IO3, LED_OFF);
-  write_led_io(LED_IO4, LED_OFF);
-  write_led_io(LED_IO5, LED_OFF);
-  write_led_io(LED_IO6, LED_OFF);
-  write_led_io(LED_IO7, LED_OFF);
-  write_led_io(LED_IO8, LED_OFF);
+	write_led_io(LED_IO1, LED_OFF);
+	write_led_io(LED_IO2, LED_OFF);
+	write_led_io(LED_IO3, LED_OFF);
+	write_led_io(LED_IO4, LED_OFF);
+	write_led_io(LED_IO5, LED_OFF);
+	write_led_io(LED_IO6, LED_OFF);
+	write_led_io(LED_IO7, LED_OFF);
+	write_led_io(LED_IO8, LED_OFF);
   
   //读取全局校准数据
   read_cali_data();
