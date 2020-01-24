@@ -20,7 +20,7 @@ git clone https://github.com/sikaxn/QRMWiki.git
 
 # Announcements
 
-There's a rules manual update!!!
+Happy Chinese New Year!
 
 # Introduction
 
