@@ -10,13 +10,14 @@
 #include "sys.h"
 
 
-uint8_t usart4_send[4]; //set an arry with 4 #
-uint8_t L1=0,L2=0,R1=0,R2=0;
+char usart4_send[4]; //set an arry with 4 #
+char L1='0',L2='0',R1='0',R2='0';
 void USART4_pneu_callback(void){
-		L1 = usart4_send[0];
-		L2 = usart4_send[1];
-		R1 = usart4_send[2];
-		R2 = usart4_send[3];
+	usart4_send[0]=L1;
+	usart4_send[1]=L2;
+	usart4_send[2]=R1;
+	usart4_send[3]=R2;
+	
 }
 
 void pneu_task (const void*argu){
@@ -28,48 +29,50 @@ void pneu_task (const void*argu){
 				switch (rc.sw1)
   {
     case RC_UP:{
-		L1 = 1;
-		L2 = 1;
+		L1 = '1';
+		L2 = '1';
+			write_led_io(LED_IO1,LED_ON);
 		} //user custom function
    break;
     
    case RC_MI: {
-		L1 = 1;
-		L2 = 0;
+		L1 = '1';
+		L2 = '0';
+		 write_led_io(LED_IO1,LED_OFF);
 	 }//user custom function
     break;
 
     case RC_DN:
     {
-		L1 = 0;
-		L2 = 0;
+		L1 = '0';
+		L2 = '0';
     }
     break;
   }
 	switch (rc.sw2)
   {
     case RC_UP:{
-		R1 = 1;
-		R2 = 1;
+		R1 = '1';
+		R2 = '1';
 		} //user custom function
    break;
     
    case RC_MI: {
-	 	R1 = 1;
-		R2 = 0;
+	 	R1 = '1';
+		R2 = '0';
 	 }//user custom function
     break;
 
     case RC_DN:
     {
-		 R1 = 0;
-		 R2 = 0;
+		 R1 = '0';
+		 R2 = '0';
     }
     break;
   }
 		USART4_pneu_callback();
 		write_uart(USER_UART4,usart4_send,13);
-		osDelay(30);
+		osDelay(100);
 	}
 }
 

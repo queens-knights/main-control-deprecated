@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp
+--cpu Cortex-M4.fp
 ".\rm_infantry\can_device.o"
 ".\rm_infantry\uart_device.o"
 ".\rm_infantry\calibrate.o"
@@ -26,6 +26,6 @@
 ".\rm_infantry\stm32f4xx_it.o"
 "..\Inc\rm_infantry1_3.lib"
 --strict --scatter ".\rm_infantry\rm_infantry.sct"
---diag_suppress=L6329 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\output\rm_infantry.map" -o .\rm_infantry\rm_infantry.axf
