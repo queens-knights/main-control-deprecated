@@ -51,21 +51,21 @@ typedef struct ramp_t
   .calc = &ramp_calc, \
 } \
 /**
-  * @brief     斜坡控制结构体初始化
-  * @param[in] ramp: 斜坡数据结构体指针
-  * @param[in] scale: 控制数据变化斜率
+  * @brief     斜坡控制结构体初始化 Initialization of ramp control structure
+  * @param[in] ramp: 斜坡数据结构体指针 ramp data structure pointer
+  * @param[in] scale: 控制数据变化斜率 Control data slope change
   */
 void  ramp_init(ramp_t *ramp, int32_t scale);
 /**
-  * @brief     斜坡控制计算函数
-  * @param[in] ramp: 斜坡数据结构体指针
-  * @retval    斜坡控制计算输出
+  * @brief     斜坡控制计算函数 Ramp control calculation function
+  * @param[in] ramp: 斜坡数据结构体指针 Ramp data structure pointer
+  * @retval    斜坡控制计算输出 Ramp control calculation output
   */
 float ramp_calc(ramp_t *ramp);
 
-/* yaw 轴云台控制斜坡 */
+/* yaw 轴云台控制斜坡 yaw axis gimbal control ramp*/
 extern ramp_t yaw_ramp;
-/* pitch 轴云台控制斜坡 */
+/* pitch 轴云台控制斜坡 pitch axis gimbal control ramp*/
 extern ramp_t pit_ramp;
 
 #endif
