@@ -97,7 +97,7 @@ void pid_reset(pid_t *pid, float kp, float ki, float kd);
 float pid_calc(pid_t *pid, float get, float set);
 
 
-//云台电机 PID 结构体定义 Definition of PID structure of gimbal motor
+//云台电机 PID 结构体定义 Definition of PID structure of  gimbal motor
 extern pid_t pid_pit;
 extern pid_t pid_yaw;
 extern pid_t pid_pit_speed;
