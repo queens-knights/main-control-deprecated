@@ -40,72 +40,72 @@ enum
 };
 
 /**
-  * @brief     PID 结构体
+  * @brief     PID 结构体 PID structure
   */
 typedef struct
 {
-  /* p、i、d参数 */
+  /* p、i、d参数 p, i, d parameter*/
   float p;
   float i;
   float d;
 
-  /* 目标值、反馈值、误差值 */
+  /* 目标值、反馈值、误差值 target value, feedback value, error value*/
   float set;
   float get;
   float err[2];
 
-  /* p、i、d各项计算出的输出 */
+  /* p、i、d各项计算出的输出 p, i, d calculated output*/
   float pout; 
   float iout; 
   float dout; 
 
-  /* pid公式计算出的总输出 */
+  /* pid公式计算出的总输出 pid formula calculated output*/
   float out;
 
-  /* pid最大输出限制  */
+  /* pid最大输出限制  pid max output limit*/
   uint32_t max_output;
   
-  /* pid积分输出项限幅 */
+  /* pid积分输出项限幅 pid integral output limit*/
   uint32_t integral_limit;
  
 } pid_t;
 
 /**
-  * @brief     PID 初始化函数
-  * @param[in] pid: PID 结构体
-  * @param[in] max_out: 最大输出
-  * @param[in] intergral_limit: 积分限幅
-  * @param[in] kp/ki/kd: 具体 PID 参数
+  * @brief     PID 初始化函数 PID initialization function
+  * @param[in] pid: PID 结构体 PID structure
+  * @param[in] max_out: 最大输出 max output
+  * @param[in] intergral_limit: 积分限幅 integral limit
+  * @param[in] kp/ki/kd: 具体 PID 参数 detailed PID parameter
   */
 void pid_init(pid_t *pid, uint32_t max_out, uint32_t intergral_limit, \
               float kp, float ki, float kd);
 
 /**
-  * @brief     PID 参数复位函数
-  * @param[in] pid: PID 结构体
-  * @param[in] kp/ki/kd: 具体 PID 参数
+  * @brief     PID 参数复位函数 PID parameter reset function
+  * @param[in] pid: PID 结构体 PID structure
+  * @param[in] kp/ki/kd: 具体 PID 参数 detailed PID parameter
   */
 void pid_reset(pid_t *pid, float kp, float ki, float kd);
 
 /**
-  * @brief     PID 计算函数，使用位置式 PID 计算
-  * @param[in] pid: PID 结构体
-  * @param[in] get: 反馈数据
-  * @param[in] set: 目标数据
-  * @retval    PID 计算输出
+  * @brief     PID 计算函数，使用位置式 PID 计算 PID calculation function, using locational PID calculation
+  * @param[in] pid: PID 结构体 PID structure
+  * @param[in] get: 反馈数据 Feedback data
+  * @param[in] set: 目标数据 Target data
+  * @retval    PID 计算输出 PID calculated output
   */
 float pid_calc(pid_t *pid, float get, float set);
 
 
-//云台电机 PID 结构体定义
+//云台电机 PID 结构体定义 Definition of PID structure of gimbal motor
 extern pid_t pid_pit;
 extern pid_t pid_yaw;
 extern pid_t pid_pit_speed;
 extern pid_t pid_yaw_speed;
-//底盘电机 PID 结构体定义
+//底盘电机 PID 结构体定义 Definition of PID structure of chassis motor
 extern pid_t pid_wheel_spd[4];
 extern pid_t pid_chassis_angle;
-    //拨弹电机 PID 结构体定义
+//拨弹电机 PID 结构体定义 Definition of PID structure of drum motor
 extern pid_t pid_trigger;
 extern pid_t pid_trigger_speed;
 extern pid_t pid_arm_moto;

@@ -30,21 +30,21 @@
 
 #include "pid.h"
 
-//云台电机 PID 结构体定义
+//云台电机 PID 结构体定义 Definition of PID structure of gimbal motor
 pid_t pid_pit           = { 0 };
 pid_t pid_yaw           = { 0 };
-pid_t pid_yaw_speed     = { 0 }; //yaw 轴速度环
-pid_t pid_pit_speed     = { 0 }; //pitch 轴速度环
-//底盘电机 PID 结构体定义
+pid_t pid_yaw_speed     = { 0 }; //yaw 轴速度环 yaw shaft spped ring
+pid_t pid_pit_speed     = { 0 }; //pitch 轴速度环 pitch shaft speed ring
+//底盘电机 PID 结构体定义 Definition of PID structure of Chassis Motor
 pid_t pid_wheel_spd[4]  = { 0 };
 pid_t pid_chassis_angle = { 0 };
-//拨弹电机 PID 结构体定义
+//拨弹电机 PID 结构体定义 Definition of PID structure of drum motor
 pid_t pid_trigger       = { 0 };
 pid_t pid_trigger_speed = { 0 };
 
 pid_t pid_claw_moto     = { 0 };
 pid_t pid_arm_moto      = { 0 };
-pid_t pid_trans_moto    = { 0 };//chuansongdai
+pid_t pid_trans_moto    = { 0 };//传送带 conveyor belt
 
 static void abs_limit(float *a, float ABS_MAX)
 {
@@ -55,11 +55,11 @@ static void abs_limit(float *a, float ABS_MAX)
 }
 
 /**
-  * @brief     PID 初始化函数
-  * @param[in] pid: PID 结构体
-  * @param[in] max_out: 最大输出
-  * @param[in] intergral_limit: 积分限幅
-  * @param[in] kp/ki/kd: 具体 PID 参数
+  * @brief     PID 初始化函数 PID initializtation function
+  * @param[in] pid: PID 结构体 PID structure
+  * @param[in] max_out: 最大输出 Max output
+  * @param[in] intergral_limit: 积分限幅 Integral limit
+  * @param[in] kp/ki/kd: 具体 PID 参数 Detialed PID parameter
   */
 void pid_init(pid_t *pid, uint32_t max_out, uint32_t intergral_limit, \
               float kp, float ki, float kd)
@@ -73,11 +73,11 @@ void pid_init(pid_t *pid, uint32_t max_out, uint32_t intergral_limit, \
 }
 
 /**
-  * @brief     PID 计算函数，使用位置式 PID 计算
-  * @param[in] pid: PID 结构体
-  * @param[in] get: 反馈数据
-  * @param[in] set: 目标数据
-  * @retval    PID 计算输出
+  * @brief     PID 计算函数，使用位置式 PID 计算 PID calculation function, using locational PID calculation
+  * @param[in] pid: PID 结构体 PID structure
+  * @param[in] get: 反馈数据 Feedback data
+  * @param[in] set: 目标数据 Target date
+  * @retval    PID 计算输出 PID calculated output
   */
 float pid_calc(pid_t *pid, float get, float set)
 {
@@ -99,9 +99,9 @@ float pid_calc(pid_t *pid, float get, float set)
 }
 
 /**
-  * @brief     PID 参数复位函数
-  * @param[in] pid: PID 结构体
-  * @param[in] kp/ki/kd: 具体 PID 参数
+  * @brief     PID 参数复位函数 PID parameter reset function
+  * @param[in] pid: PID 结构体 PID structure
+  * @param[in] kp/ki/kd: 具体 PID 参数 Detailed PID parameter
   */
 void pid_reset(pid_t *pid, float kp, float ki, float kd)
 {
