@@ -45,27 +45,33 @@
 chassis_t chassis;
 
 /* 下面为底盘功能任务的函数 */
+/* Below is chassis functions*/
 void chassis_task(const void* argu)
 {
   //初始化底盘控制PID参数
+  //init chassis PID parameter
   chassis_pid_param_init();
 
   //底盘控制任务循环
+  //chassis control loop
   uint32_t chassis_wake_time = osKernelSysTick();
   while (1)
   {
 		pc_kb_hook();
     //切换底盘状态
+	//change chassis status
     get_chassis_mode();
 
     switch (chassis.mode)
     {
       //底盘跟随云台模式，右侧拨杆在上面
+	  //chassis follow gimbal, right switch go up
       case CHASSIS_FOLLOW_GIMBAL:
       {
         chassis_control_information_get();
         
         //底盘跟随云台旋转控制，覆盖前面计算出来的值
+		//chassis follow gimbal control, cover values calculated beforehand
         if ((gim.ctrl_mode == GIMBAL_CLOSE_LOOP_ZGYRO)
          || ((gim.ctrl_mode == GIMBAL_NO_ACTION) && (gim.no_action_flag == 1)))
           chassis.vw = pid_calc(&pid_chassis_angle, yaw_relative_angle, 0);
@@ -75,6 +81,8 @@ void chassis_task(const void* argu)
       
       //底盘开环模式，右侧拨杆在中间
       //此模式适用于不装云台情况下单独控制底盘使用
+	  //chassis open loop mode, right switch in middle
+	  //this mode is for chassis only
       case CHASSIS_OPEN_LOOP:
       {
         chassis_control_information_get();
@@ -85,10 +93,12 @@ void chassis_task(const void* argu)
         chassis_control_information_get();
         
         //底盘扭腰旋转速度处理，覆盖前面计算出来的值
+		//chassis twisting speed processsing, covering values before
         chassis_twist_handle();
       }break;
 
       //底盘保持静止锁死不动
+	  //chassis lock and not moving
       default:
       {
         chassis.vy = 0;
@@ -111,6 +121,7 @@ void chassis_task(const void* argu)
     
     
     //底盘任务周期控制 10ms
+	//chassis task control task loop period
     osDelayUntil(&chassis_wake_time, CHASSIS_PERIOD);
   }
 }
@@ -155,14 +166,17 @@ void get_chassis_mode(void)
 void chassis_pid_param_init(void)
 {
   //挂起底盘任务
+  //hang chassis task
   //osThreadSuspend(NULL);
   
   //底盘PID参数设置
+  //chassis pid parameter
   for (int k = 0; k < 4; k++)
   {
     pid_init(&pid_wheel_spd[k], 7000, 1000, 3.0f, 0, 0);
   }
   //底盘跟随PID参数设置
+  //chassis follow pid parameter
   pid_init(&pid_chassis_angle, MAX_CHASSIS_VR_SPEED, 50, 12.0f, 0.0f, 0.0f);
   
 }

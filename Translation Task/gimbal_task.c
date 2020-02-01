@@ -46,6 +46,7 @@
 #include "math.h"
 
 /* 以下是云台任务所使用变量的定义，请勿修改 */
+/* avoid modify these variable, these are for gimbal parameter*/
 /* gimbal global information */
 gimbal_yaw_t gim;
 imu_t        imu;
@@ -63,17 +64,21 @@ int32_t   yaw_center_offset = 0;
 uint32_t gimbal_time_last;
 int gimbal_time_ms;
 /* 执行云台功能任务的函数 */
+/* gimbal function*/
 void gimbal_task(const void* argu)
 {
 		
 	
   //云台和拨弹电机参数初始化
+  //initlize dialwheel motor
   gimbal_init_param();
   
   //从flash中读取云台中点位置
+  //read gimbal center point from flash (calibrate data)
   read_gimbal_offset(&pit_center_offset, &yaw_center_offset);
   
   //云台控制任务循环
+  //gimbal control close loop
   uint32_t gimbal_wake_time = osKernelSysTick();
   while (1)
   {
@@ -81,20 +86,24 @@ void gimbal_task(const void* argu)
     gimbal_time_last = HAL_GetTick();
     
     //获取云台传感器信息
+	//get gimbal sensor data
     get_gimbal_information();
     
     //根据控制命令切换云台状态
+	//change gimbal mode by command
     get_gimbal_mode();
   
     switch (gim.ctrl_mode)
     {
       //云台初始化状态
+	  //gimbal init
       case GIMBAL_INIT:
       {
         gimbal_init_handle();
       }break;
       
       //云台无输入状态
+	  //gimbal no input mode
       case GIMBAL_NO_ACTION:
       {
         gimbal_noaction_handle();
@@ -102,6 +111,7 @@ void gimbal_task(const void* argu)
       }break;
       
       //云台闭环控制模式
+	  //gimbal close loop mode
       case GIMBAL_CLOSE_LOOP_ZGYRO:
       {
         gimbal_loop_handle();
@@ -113,10 +123,11 @@ void gimbal_task(const void* argu)
     }
 
     //云台控制，如果有模块离线，就切断云台电机输出
-    if (gim.ctrl_mode != GIMBAL_RELAX                 //云台释放模式
-        && !glb_err.err_list[REMOTE_CTRL_OFFLINE].err_exist //遥控器离线
-        && !glb_err.err_list[GIMBAL_YAW_OFFLINE].err_exist  //yaw轴电机离线
-        && !glb_err.err_list[GIMBAL_PIT_OFFLINE].err_exist) //pitch轴电机离线
+	//if offline, cut motor motor output
+    if (gim.ctrl_mode != GIMBAL_RELAX                 //云台释放模式gimbal release mode
+        && !glb_err.err_list[REMOTE_CTRL_OFFLINE].err_exist //遥控器离线remote offline
+        && !glb_err.err_list[GIMBAL_YAW_OFFLINE].err_exist  //yaw轴电机离线yaw offline
+        && !glb_err.err_list[GIMBAL_PIT_OFFLINE].err_exist) //pitch轴电机离线pitch offline
     {
       gimbal_custom_control();
       
@@ -129,11 +140,13 @@ void gimbal_task(const void* argu)
     }
     
     //云台任务周期控制 5ms
+	//gimbal loop period
     osDelayUntil(&gimbal_wake_time, GIMBAL_PERIOD);
   }
 }
 
 /* 以下为云台任务调用的内部函数，请勿改动 */
+/* avoid change these, gimbal function*/
 
 /**
   * @brief     get relative position angle to center
@@ -184,17 +197,21 @@ float     yaw_relative_angle;  //unit: degree
 void get_gimbal_information(void)
 {
   //获取 imu 数据
+  //get imu data
   get_imu_data(&imu);
   
   //云台相对角度获取
+  //gimbal relative angke get
   yaw_relative_angle =  get_relative_pos(moto_yaw.ecd, yaw_center_offset)/22.75f;
   pit_relative_angle = -get_relative_pos(moto_pit.ecd, pit_center_offset)/22.75f;
   
   //云台模式获取
+  //get gimbal mode
   gim.ac_mode = remote_is_action();
   gim.last_mode = gim.ctrl_mode;
   
   //读取遥控器的控制命令
+  //read remote control 
   pc_kb_hook();
 }
 
@@ -203,6 +220,8 @@ extern TaskHandle_t task1_t;
 void read_gimbal_offset(int32_t *pit_offset, int32_t *yaw_offset)
 {
   /* 配置摩擦轮电调，同时电调消除警报 */
+  /* initlize friction wheel esc*/
+  //fric wheel require activate using a specific pwm signal before energize 
   start_pwm_output(PWM_IO1);
   start_pwm_output(PWM_IO2);
   
@@ -212,11 +231,13 @@ void read_gimbal_offset(int32_t *pit_offset, int32_t *yaw_offset)
     *yaw_offset = glb_cali_data.gimbal_cali_data.yaw_offset;
     
     //一切正常，唤醒底盘任务
+	//if everything normal, wake up chassis task
     osThreadResume(task1_t);
   }
   else
   {
     //云台没有校准，进入校准处理
+	//in case of no calibration data
     while (1)
     {
       gimbal_cali_hook();
@@ -321,12 +342,14 @@ void gimbal_loop_handle(void)
   if (chassis.mode != CHASSIS_FIXED_ROUTE)
   {
     //限制yaw轴的活动角度
+	//limit yaw angle
     if ((yaw_relative_angle >= YAW_ANGLE_MIN) && (yaw_relative_angle <= YAW_ANGLE_MAX))
     {
       gimbal_yaw_control();
       VAL_LIMIT(yaw_angle_ref, chassis_angle_tmp + YAW_ANGLE_MIN, chassis_angle_tmp + YAW_ANGLE_MAX);
     }
     //限制pitch轴的活动角度
+	//limit pitch angle
     if ((pit_relative_angle >= PIT_ANGLE_MIN) && (pit_relative_angle <= PIT_ANGLE_MAX))
     {
       gimbal_pitch_control();
@@ -409,38 +432,44 @@ void gimbal_noaction_handle(void)
 void gimbal_init_param(void)
 {
   //电调 bug
+  //ESC fuckup fix
   osDelay(3000);
   
   /* 云台pitch轴电机PID参数初始化 */
+  /* pitch pid*?
   pid_init(&pid_pit, 1, 0,
                   30, 0, 0); //
   pid_init(&pid_pit_speed, 1, 2000,
                   20, 0.1, 0);
 
   /* 云台yaw轴电机PID参数初始化 */
+  /*yaw pid*/
   pid_init(&pid_yaw, 1, 0,
                   25, 0, 0); //
   pid_init(&pid_yaw_speed, 1, 800,
                   20, 0, 0);
 
   /* 拨弹电机PID参数初始化 */
+  /*dialwheel pid*/
   pid_init(&pid_trigger, 1, 2000,
                   0.15f, 0, 0);
   pid_init(&pid_trigger_speed, 1, 4000,
                   1.5, 0.05, 0);
 
   /* 将云台的初始化状态设置为释放 */
+  /* set init status to gimbal rlease (deenergkzed)
   gim.ctrl_mode = GIMBAL_RELAX;
   
 }
 
 /* 卡弹处理 */
+/*bullet stuck handling*/
 uint32_t stall_count = 0;
 uint32_t stall_inv_count = 0;
 uint8_t  stall_f = 0;
 void block_bullet_handle(void)
 {
-  if (pid_trigger_speed.out <= -5000)  //卡弹电流
+  if (pid_trigger_speed.out <= -5000)  //卡弹电流stuck current
   {
     if (stall_f == 0)
       stall_count ++;
@@ -448,7 +477,7 @@ void block_bullet_handle(void)
   else
     stall_count = 0;
   
-  if (stall_count >= 600) //卡弹时间3s
+  if (stall_count >= 600) //卡弹时间3 stuck time
   {
     stall_f = 1;
     stall_count = 0;
@@ -459,7 +488,7 @@ void block_bullet_handle(void)
   {
     stall_inv_count++;
     
-    if (stall_inv_count >= 100)  //反转时间0.5s
+    if (stall_inv_count >= 100)  //反转时间0.5s reverse 0.5s
     {
       stall_f = 0;
       stall_inv_count = 0;
@@ -471,28 +500,31 @@ void block_bullet_handle(void)
 
 
 /* 射击任务相关参数 */
+/*shoot related parameter*/
 uint8_t   shoot_cmd = 0;
 uint32_t  continue_shoot_time;
 uint8_t   continuous_shoot_cmd = 0;
 uint8_t   fric_wheel_run = 0;
 uint16_t  fric_wheel_speed = SHOT_FRIC_WHEEL_SPEED;
 /* 上次的遥控数据数据 */
+/* previous remote data handeling*/
 uint8_t   last_left_key;
 uint8_t   last_right_key;
 uint8_t   last_sw1;
 uint8_t   last_sw2;
 int16_t   last_wheel_value;
-//遥控器开关摩擦轮
+//遥控器开关摩擦轮friction wheel remote control
 #define RC_FIRC_CTRL     ((last_sw1 != RC_UP) && (rc.sw1 == RC_UP))           //((last_wheel_value != -660) && (rc.wheel == -660))
-//遥控器单发
+//遥控器单发remote single shoot
 #define RC_SINGLE_TRIG   ((last_sw1 != RC_DN) && (rc.sw1 == RC_DN))           // ((last_wheel_value != 660) && (rc.wheel == 660))
-//遥控器连发
+//遥控器连发remote continue shoot
 #define RC_CONTIN_TRIG   ((rc.sw1 == RC_DN) && (HAL_GetTick() - continue_shoot_time >= 1500))   //((rc.wheel == 660) && (HAL_GetTick() - continue_shoot_time >= 1000))
-//遥控器退出连发模式
+//遥控器退出连发模式remote stop shooting
 #define EXIT_CONTIN_TRIG (last_sw1 != RC_DN)                                 // (rc.wheel <= 600)
 void shoot_task(void)
 {
   /* 开关摩擦轮操作控制 */
+  /* friction wheel control*/
   {
     if ( RC_FIRC_CTRL && rc.sw2 == RC_UP)
         fric_wheel_run = !fric_wheel_run;
@@ -509,20 +541,21 @@ void shoot_task(void)
 
   
   /* 开关摩擦轮实现函数 */
+  /* turn on off friction wheel*/
   turn_on_off_friction_wheel();
   
   /* bullet single or continue trigger command control  */
   {
-    if ( RC_SINGLE_TRIG                  //遥控器单发
-      || (km.lk_sta == KEY_PRESS_ONCE) ) //鼠标单发
+    if ( RC_SINGLE_TRIG                  //遥控器单发remote single shoot
+      || (km.lk_sta == KEY_PRESS_ONCE) ) //鼠标单发mouse single shllt
     {
       continue_shoot_time = HAL_GetTick();
       shoot_cmd   = 1;
       continuous_shoot_cmd = 0;
     }
 
-    if ( RC_CONTIN_TRIG                  //遥控器连发
-      || (km.lk_sta == KEY_PRESS_LONG) ) //鼠标连发
+    if ( RC_CONTIN_TRIG                  //遥控器连发remote continue shoot
+      || (km.lk_sta == KEY_PRESS_LONG) ) //鼠标连发mouse single shoot
     {
       shoot_cmd   = 0;
       continuous_shoot_cmd = 1;
@@ -532,7 +565,7 @@ void shoot_task(void)
       continuous_shoot_cmd = 0;
     }
     
-    if ( EXIT_CONTIN_TRIG               //退出连发处理
+    if ( EXIT_CONTIN_TRIG               //退出连发处理exit continue shoot
       || ((km.lk_sta == KEY_RELEASE) && (last_left_key == KEY_PRESS_LONG)) )
     {
       trigger_moto_position_ref = moto_trigger.total_ecd;
@@ -547,6 +580,7 @@ void shoot_task(void)
 
 
   /* 单发连发射击实现函数 */
+  /* single shoot parameter*/
   shoot_custom_control();
 
   last_sw1 = rc.sw1;
