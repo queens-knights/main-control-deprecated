@@ -34,32 +34,32 @@
 #include "rm_hal_lib.h"
 
 /**
-  * @brief     解析后的遥控器数据结构体
+  * @brief     解析后的遥控器数据结构体 Data structure of remote control after parsing
   */
 typedef struct 
 {
-  /* 遥控器的通道数据，数值范围：-660 ~ 660 */
-  int16_t ch1;   //右侧左右
-  int16_t ch2;   //右侧上下
-  int16_t ch3;   //左侧左右
-  int16_t ch4;   //左侧上下
+  /* 遥控器的通道数据，数值范围：-660 ~ 660 Channel data of remote control, data range: -660 ~ 660*/
+  int16_t ch1;   //右侧左右 right side left and right
+  int16_t ch2;   //右侧上下 right side upper and lower
+  int16_t ch3;   //左侧左右 left side left and right
+  int16_t ch4;   //左侧上下 left side upper and lower
   
-  /* 遥控器的拨杆数据，上中下分别为：1、3、2 */
-  uint8_t sw1;   //左侧拨杆
-  uint8_t sw2;   //右侧拨杆
+  /* 遥控器的拨杆数据，上中下分别为：1、3、2 Remote control lever data, upper, middle, and lower are: 1, 3, and 2, respectively*/
+  uint8_t sw1;   //左侧拨杆 left side lever
+  uint8_t sw2;   //右侧拨杆 right side lever
   
-  /* PC 鼠标数据 */
+  /* PC 鼠标数据 PC mouse data*/
   struct
   {
-    /* 鼠标移动相关 */
-    int16_t x;   //鼠标平移
-    int16_t y;   //鼠标上下
-    /* 鼠标按键相关，1为按下，0为松开 */
-    uint8_t l;   //左侧按键
-    uint8_t r;   //右侧按键
+    /* 鼠标移动相关 mouse moving related*/
+    int16_t x;   //鼠标平移 mouse x
+    int16_t y;   //鼠标上下 mouse y
+    /* 鼠标按键相关，1为按下，0为松开 mouse button related, 1 is pressed, 0 is released*/
+    uint8_t l;   //左侧按键 left button
+    uint8_t r;   //右侧按键 right button
   }mouse;
   
-  /* PC 键盘按键数据 */
+  /* PC 键盘按键数据 PC keyboard key data*/
   union 
   {
     uint16_t key_code;
@@ -84,12 +84,12 @@ typedef struct
     }bit;
   }kb;
   
-  /* 遥控器左侧拨轮数据 */
+  /* 遥控器左侧拨轮数据 Remote control left dialwheel data*/
   int16_t wheel;
 } rc_type_t;
 
 /**
-  * @brief     遥控器拨杆数据枚举
+  * @brief     遥控器拨杆数据枚举 Remote control level data enumerate
   */
 enum
 {
@@ -99,13 +99,13 @@ enum
 };
 
 /**
-  * @brief     解析遥控器数据
-  * @param     rc: 解析后的遥控器数据结构体指针
-  * @param     buff: 串口接收到的遥控器原始数据指针
+  * @brief     解析遥控器数据 parsing remote control data
+  * @param     rc: 解析后的遥控器数据结构体指针 rc: remote control data structure pointer after parsing
+  * @param     buff: 串口接收到的遥控器原始数据指针 buff: Remote control original data pointer that serial port received
   */
 static void remote_data_handle(rc_type_t *rc, uint8_t *buff);
 /**
-  * @brief     遥控器中断回调函数，在设置 UART 接收时注册
+  * @brief     遥控器中断回调函数，在设置 UART 接收时注册 Remote control interrupt callback function, registered when setting UART reception
   */
 void dbus_uart_callback(void);
 

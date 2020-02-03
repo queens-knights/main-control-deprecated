@@ -29,7 +29,7 @@
 
 
 
-/************************************ 用户对底盘自定义控制 *************************************/
+/************************************ 用户对底盘自定义控制 User defined control of Chassis*************************************/
 #include "chassis_task.h"
 #include "gimbal_task.h"
 #include "can_device.h"
@@ -41,31 +41,31 @@
 #include "stdlib.h"
 #include "string.h"
 
-/* 底盘电机期望转速(rpm) */
+/* 底盘电机期望转速(rpm) Expected spinning speed of chassis motor*/
 int16_t chassis_moto_speed_ref[4];
-/* 底盘电机电流 */
+/* 底盘电机电流 chassis motor current*/
 int16_t chassis_moto_current[4];
 
-/* 底盘控制信号获取 */
+/* 底盘控制信号获取 Chassis control signal acquisition*/
 void chassis_control_information_get(void)//右前1 左前2 左后3 右后4
 {
-  //遥控器以及鼠标对底盘的控制信息转化为标准单位，平移为(mm/s)旋转为(degree/s)
+  //遥控器以及鼠标对底盘的控制信息转化为标准单位，平移为(mm/s)旋转为(degree/s) Transfer the units of control information of remote control and mouse to chassis into SI units, movement is mm/s and spinning is degree/s
   chassis.vx = rc.ch1 * CHASSIS_RC_MOVE_RATIO_X / RC_MAX_VALUE * MAX_CHASSIS_VX_SPEED + km.vx * CHASSIS_PC_MOVE_RATIO_X;
   chassis.vy = rc.ch4 * CHASSIS_RC_MOVE_RATIO_Y / RC_MAX_VALUE * MAX_CHASSIS_VY_SPEED + km.vy * CHASSIS_PC_MOVE_RATIO_Y;
   chassis.vw = rc.ch3 * CHASSIS_RC_MOVE_RATIO_R / RC_MAX_VALUE * MAX_CHASSIS_VR_SPEED + rc.mouse.x * CHASSIS_PC_MOVE_RATIO_R;
 }
 
 
-/* 底盘运动的速度分解，以及电机转速的闭环控制 */
+/* 底盘运动的速度分解，以及电机转速的闭环控制 Speed vector of chassis movement, and close loop control of  motor speed*/
 void chassis_custom_control(void)
 {
-  //底盘速度分解，计算底盘电机转速
+  //底盘速度分解，计算底盘电机转速 CHassis speed vector, calculating chassis motor speed
   chassis_moto_speed_calc(chassis.vx, chassis.vy, chassis.vw, chassis_moto_speed_ref);
 
-  //开环计算底盘轮子电机电流
+  //开环计算底盘轮子电机电流 Open loop calculation of Chassis wheel motor current
   //chassis_open_loop_calculate();
   
-  //闭环计算底盘轮子电机电流
+  //闭环计算底盘轮子电机电流 Close loop calculation of chassis wheel motor current
   chassis_close_loop_calculate();
   
   //将计算好的电流值发送给电调

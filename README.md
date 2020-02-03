@@ -20,7 +20,7 @@ git clone https://github.com/sikaxn/QRMWiki.git
 
 # Announcements
 
-Happy Chinese New Year!
+Good luck on midterms. 
 
 # Introduction
 
