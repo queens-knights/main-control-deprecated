@@ -20,7 +20,7 @@ git clone https://github.com/sikaxn/QRMWiki.git
 
 # Announcements
 
-Good luck on midterms. 
+Have a nice reading week. 
 
 # Introduction
 
