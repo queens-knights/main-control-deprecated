@@ -26,6 +26,8 @@ Have a nice reading week. Also, happy valentine day.
 
 [Read the announcement here](https://www.robomaster.com/en-US/resource/pages/1105?type=announcementSub) and wash your hand frequently. 
 
+If you need reference of comments in Chinese, some translated code (incomplete) can be found in [translation task](https://github.com/sikaxn/QRMWiki/tree/master/Translation%20Task) folder. If you think the translation is not accurate, please send your question through slack. 
+
 # Introduction
 
 Code floder contains previous used code, current code on robot and some other open source code. IMG folder is for storing picture in the wiki section and you don't needs to look through. RM tools are DJI official software tool, Schematics are schematics for Dev baord. User Manuals are pdf of DJI RM official user manual. 
