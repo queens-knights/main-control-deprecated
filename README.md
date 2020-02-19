@@ -20,7 +20,7 @@ git clone https://github.com/sikaxn/QRMWiki.git
 
 # Announcements
 
-Have a nice reading week. Also, happy valentine day.
+Have a nice reading week.
 
 **Due to Coronavirus, DJI release an announcement.**
 
