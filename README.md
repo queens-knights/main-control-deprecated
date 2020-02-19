@@ -20,7 +20,13 @@ git clone https://github.com/sikaxn/QRMWiki.git
 
 # Announcements
 
-Good luck on midterms. 
+Have a nice reading week. Also, happy valentine day.
+
+**Due to Coronavirus, DJI release an announcement.**
+
+[Read the announcement here](https://www.robomaster.com/en-US/resource/pages/1105?type=announcementSub) and wash your hand frequently. 
+
+If you need reference of comments in Chinese, some translated code (incomplete) can be found in [translation task](https://github.com/sikaxn/QRMWiki/tree/master/Translation%20Task) folder. If you think the translation is not accurate, please send your question through slack. 
 
 # Introduction
 
