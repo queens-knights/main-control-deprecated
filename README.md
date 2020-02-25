@@ -20,8 +20,6 @@ git clone https://github.com/sikaxn/QRMWiki.git
 
 # Announcements
 
-Have a nice reading week.
-
 **Due to Coronavirus, DJI release an announcement.**
 
 [Read the announcement here](https://www.robomaster.com/en-US/resource/pages/1105?type=announcementSub) and wash your hand frequently. 
