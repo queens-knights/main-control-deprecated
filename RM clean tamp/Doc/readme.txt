@@ -30,7 +30,7 @@
  * 5、如果需要调试，在 keil 工程中的 debug 选项选择 JLINK 设备，设备接口选择 SW
  *5. switch to SW mode for linker. 
  
- 
+
  Programming related
  * 编程相关：
  * RM_HAL_LIB.H has all introduction of ports define. 
