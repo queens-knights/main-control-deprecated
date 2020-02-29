@@ -52,12 +52,12 @@
 //#define USER_TASK1 blink_task
 //#define USER_TASK2 RGB11_task
 //#define USER_TASK3 pwm_task
-//#define USER_TASK1 chassis_task
+#define USER_TASK1 chassis_task
 //#define USER_TASK2 gimbal_task
-//#define USER_TASK2 detect_task
+#define USER_TASK2 detect_task
 //#define USER_TASK4 execute_task
 //#define USER_TASK5
-#define USER_TASK1 pneu_task
+//#define USER_TASK1 pneu_task
 
 /**
   * @brief     在任务函数执行前运行，可以用来初始化任务中用到的 IO 端口，
