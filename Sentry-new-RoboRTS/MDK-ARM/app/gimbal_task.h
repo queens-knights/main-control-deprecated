@@ -114,18 +114,18 @@ typedef struct
 
 extern gimbal_t gim;
 
-static void no_action_handler(void);
-static void init_mode_handler(void);
-static void closed_loop_handler(void);
+static void no_action_handler(void); // occurs when the remote is turned off
+static void init_mode_handler(void); // when the remote is idle
+static void closed_loop_handler(void); // when the remote commits action
 
-static void track_aimor_handler(void);
-static void gimbal_patrol_handler(void);
-static void pc_position_ctrl_handler(void);
+static void track_aimor_handler(void); // AI test function. Commented out
+static void gimbal_patrol_handler(void); // Sweep back and forth for use of AI, swivel head
+static void pc_position_ctrl_handler(void); // never occured but potentially when computer is controlling?
 
-void gimbal_param_init(void);
-void gimbal_back_param(void);
+void gimbal_param_init(void); // initializes all motor PIDs
+void gimbal_back_param(void); // initialize the ramps
 
-void gimbal_task(void const *argu);
+void gimbal_task(void const *argu); // MAIN: determine which state/handler we should be in along with PID calculations
 void gimbal_self_check(void);
 
 #endif

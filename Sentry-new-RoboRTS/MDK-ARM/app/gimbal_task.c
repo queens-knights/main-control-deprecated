@@ -136,7 +136,7 @@ void gimbal_task(void const *argu)
   pid_calc(&pid_yaw_spd, gim.pid.yaw_spd_fdb, gim.pid.yaw_spd_ref);
   pid_calc(&pid_pit_spd, gim.pid.pit_spd_fdb, gim.pid.pit_spd_ref);
 
-  /* safe protect */
+  /* safe protect checks if controller offline, along with pitch/yaw motors */
   if (gimbal_is_controllable())
   {
     glb_cur.gimbal_cur[0] = YAW_MOTO_POSITIVE_DIR*pid_yaw_spd.out;
@@ -145,6 +145,7 @@ void gimbal_task(void const *argu)
   }
   else
   {
+		// relax motor if uncontrollable
     memset(glb_cur.gimbal_cur, 0, sizeof(glb_cur.gimbal_cur));
     gim.ctrl_mode = GIMBAL_RELAX;
     //pid_trigger.iout = 0;
@@ -168,8 +169,9 @@ void gimbal_task(void const *argu)
 
 void init_mode_handler(void)
 {
+	// whenever the remote control is turned off this mode is engaged
   /* lift gimbal pitch */
-  gim.pid.pit_angle_fdb = gim.sensor.pit_relative_angle;
+  gim.pid.pit_angle_fdb = gim.sensor.pit_relative_angle; 
   gim.pid.pit_angle_ref = gim.sensor.pit_relative_angle * (1 - ramp_calc(&pit_ramp));
   /* keep yaw unmove this time */
   gim.pid.yaw_angle_fdb = gim.sensor.yaw_relative_angle;
@@ -194,6 +196,7 @@ void init_mode_handler(void)
 
 void no_action_handler(void)
 {
+	// When the remote is idle for a prolonged time this is activated mode
   if (gim.input.no_action_flag == 1)
   {
     if ((HAL_GetTick() - gim.input.no_action_time) < 1500)
@@ -217,6 +220,7 @@ void no_action_handler(void)
 
 void closed_loop_handler(void)
 {
+	// when radio action provided enters this mode
   static float chassis_angle_tmp;
   static float limit_angle_range = 2;
   
@@ -245,6 +249,7 @@ void closed_loop_handler(void)
 
 void pc_position_ctrl_handler(void)
 {
+	// never occured, potentially if controlled by computer?
   static float chassis_angle_tmp;
   chassis_angle_tmp = gim.pid.yaw_angle_fdb - gim.sensor.yaw_relative_angle;
   
@@ -329,7 +334,7 @@ static void gimbal_patrol_handler(void)
   static int16_t patrol_period = PATROL_PERIOD/GIMBAL_PERIOD;
   static int16_t patrol_angle  = PATROL_ANGLE;
   
-  gim.pid.pit_angle_fdb = gim.sensor.pit_relative_angle;
+  gim.pid.pit_angle_fdb = 4;//gim.sensor.pit_relative_angle;
   gim.pid.yaw_angle_fdb = gim.sensor.yaw_relative_angle;
   
   patrol_count++;
@@ -353,9 +358,9 @@ void gimbal_param_init(void)
   
   /* pitch axis motor pid parameter */
   PID_struct_init(&pid_pit, POSITION_PID, 2000, 0,
-                  6, 0, 0); //
+                  3, 0, 0); //
   PID_struct_init(&pid_pit_spd, POSITION_PID, 7000, 3000,
-                  8, 0.2, 0);
+                  5, 0.2, 0);
 
   /* yaw axis motor pid parameter */
   PID_struct_init(&pid_yaw, POSITION_PID, 2000, 0,
