@@ -358,15 +358,15 @@ void gimbal_param_init(void)
   
   /* pitch axis motor pid parameter */
   PID_struct_init(&pid_pit, POSITION_PID, 2000, 0,
-                  3, 0, 0); //
+                  10, 0, 0); //
   PID_struct_init(&pid_pit_spd, POSITION_PID, 7000, 3000,
-                  5, 0.2, 0);
+                  7, 0.2, 0);
 
   /* yaw axis motor pid parameter */
   PID_struct_init(&pid_yaw, POSITION_PID, 2000, 0,
-                  0, 0, 0); //
+                  10, 0, 0); //
   PID_struct_init(&pid_yaw_spd, POSITION_PID, 7000, 1000,
-                  0, 0, 0);
+                  7, 0.2, 0);
   
   /* bullet trigger motor pid parameter */
   PID_struct_init(&pid_trigger, POSITION_PID, 10000, 2000,
