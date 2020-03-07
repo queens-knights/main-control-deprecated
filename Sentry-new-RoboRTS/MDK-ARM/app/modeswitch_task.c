@@ -95,23 +95,6 @@ void get_main_ctrl_mode(void)
   {
     switch (rc.sw2)
     {
-      case RC_UP:
-      {
-        glb_ctrl_mode = MANUAL_CTRL_MODE;
-      }break;
-      
-#ifdef AUTO_NAVIGATION
-      case RC_MI:
-      {
-        glb_ctrl_mode = SEMI_AUTO_MODE;
-      }break;
-      
-      case RC_DN:
-      {
-        glb_ctrl_mode = AUTO_CTRL_MODE;
-      }break;
-#endif
-      
       default:
       {
         glb_ctrl_mode = SAFETY_MODE;
@@ -125,9 +108,12 @@ void get_main_ctrl_mode(void)
     {
       case RC_UP:
       {
-        glb_ctrl_mode = MANUAL_CTRL_MODE;
-      }break;
-      
+				// AUTONOMOUS MODE
+      }
+			case RC_MI:
+			{
+				glb_ctrl_mode = MANUAL_CTRL_MODE;
+			}break;
       default:
       {
         glb_ctrl_mode = SAFETY_MODE;
@@ -313,7 +299,7 @@ static void chassis_mode_handler(void)
   {
     case MANUAL_CTRL_MODE:
     {
-      chassis.ctrl_mode = MANUAL_FOLLOW_GIMBAL;
+      chassis.ctrl_mode = MANUAL_SEPARATE_GIMBAL;
       
       /* keyboard trigger chassis twist mode */
       if (km.twist_ctrl)

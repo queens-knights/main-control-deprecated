@@ -62,7 +62,7 @@
 /* shoot speed */
 #define DEFAULT_FRIC_WHEEL_SPEED 1150 //maximum value is 2500
 /* shoot frequence */
-#define TRIGGER_MOTOR_SPEED      2000 
+#define TRIGGER_MOTOR_SPEED      -2000 
 
 
 
@@ -115,7 +115,7 @@
 #define ENCODER_ANGLE_RATIO    ((8192.0f)/360.0f)
 //...........................在这改东西了。。。。。。。。。。。。。。
 /* the deceleration ratio of pitch axis motor */
-#define PIT_DECELE_RATIO       1.0f
+#define PIT_DECELE_RATIO       -1.0f
 /* the deceleration ratio of yaw axis motor */
 #define YAW_DECELE_RATIO       1.0f
 /* the positive direction of pitch axis motor */
@@ -153,11 +153,11 @@
 #define COMPUTER_HUART     huart6 //connected to manifold/TXone
 
 
-/* gimbal relevant */
-#define PIT_ANGLE_MAX        15
-#define PIT_ANGLE_MIN        -20
-#define YAW_ANGLE_MAX        50
-#define YAW_ANGLE_MIN        -50
+/* gimbal relevant: Used to set the range of movement for the the gimbal */
+#define PIT_ANGLE_MAX        17  
+#define PIT_ANGLE_MIN        -15
+#define YAW_ANGLE_MAX        80
+#define YAW_ANGLE_MIN        -80
 
 #define LEFT_FRICTION        TIM1->CCR1
 #define RIGHT_FIRCTION       TIM1->CCR4

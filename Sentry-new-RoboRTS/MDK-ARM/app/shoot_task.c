@@ -154,7 +154,7 @@ void block_bullet_handler(void)
       stall_inv_count = 0;
     }
     else
-      trig.spd_ref = 2000;
+      trig.spd_ref = 2000 * trig.dir;
   }
 }
 
@@ -225,13 +225,13 @@ static void shoot_bullet_handler(void)
       shoot.shoot_bullets++;
     }
     else
-      trig.spd_ref = debug_tri_spd;//trig.feed_bullet_spd;
+      trig.spd_ref = debug_tri_spd*trig.dir;//trig.feed_bullet_spd;
     
   }
   else if (shoot.c_shoot_cmd)
   {
     trig.one_sta = TRIG_INIT;
-    trig.spd_ref = trig.c_shoot_spd;
+    trig.spd_ref = trig.c_shoot_spd*trig.dir;
     
     if ((trig.key_last == 0) && (trig.key == 1))
       shoot.shoot_bullets++;
@@ -241,7 +241,7 @@ static void shoot_bullet_handler(void)
   else
   {
     if (trig.key)       //not trigger
-      trig.spd_ref = debug_tri_spd;//trig.feed_bullet_spd;
+      trig.spd_ref = debug_tri_spd*trig.dir;//trig.feed_bullet_spd;
     else
       trig.spd_ref = 0;
   }
@@ -259,7 +259,7 @@ void shoot_param_init(void)
   
   memset(&trig, 0, sizeof(trigger_t));
   
-  trig.dir             = 1;
+  trig.dir             = -1;
   trig.feed_bullet_spd = 2000;
   trig.c_shoot_spd      = 4000;
   trig.one_sta         = TRIG_INIT;

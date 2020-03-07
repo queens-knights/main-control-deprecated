@@ -74,7 +74,7 @@ void chassis_task(void const *argu)
       chassis_twist_handler();
     }break;
     
-    case AUTO_FOLLOW_GIMBAL:
+    /*case AUTO_FOLLOW_GIMBAL:
     {
       taskENTER_CRITICAL();
       chassis.vx = (float)pc_recv_mesg.chassis_control_data.x_spd;
@@ -84,7 +84,7 @@ void chassis_task(void const *argu)
       
       chassis.vw = -pid_calc(&pid_chassis_angle, gim.sensor.yaw_relative_angle, chassis.position_ref); 
     }break;
-    
+    */
     case AUTO_SEPARATE_GIMBAL:
     {
       taskENTER_CRITICAL();
@@ -154,9 +154,9 @@ static void chassis_twist_handler(void)
 }
 void separate_gimbal_handler(void)
 {
-  chassis.vy = rm.vy * CHASSIS_RC_MOVE_RATIO_Y + km.vy * CHASSIS_KB_MOVE_RATIO_Y;
+  //chassis.vy = rm.vy * CHASSIS_RC_MOVE_RATIO_Y + km.vy * CHASSIS_KB_MOVE_RATIO_Y;
   chassis.vx = rm.vx * CHASSIS_RC_MOVE_RATIO_X + km.vx * CHASSIS_KB_MOVE_RATIO_X;
-  chassis.vw = rm.vw * CHASSIS_RC_MOVE_RATIO_R;
+  //chassis.vw = rm.vw * CHASSIS_RC_MOVE_RATIO_R;
 }
 void follow_gimbal_handler(void)
 {
