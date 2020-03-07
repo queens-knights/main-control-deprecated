@@ -153,8 +153,8 @@
 #define COMPUTER_HUART     huart6 //connected to manifold/TXone
 
 
-/* gimbal relevant */
-#define PIT_ANGLE_MAX        17
+/* gimbal relevant: Used to set the range of movement for the the gimbal */
+#define PIT_ANGLE_MAX        17  
 #define PIT_ANGLE_MIN        -15
 #define YAW_ANGLE_MAX        80
 #define YAW_ANGLE_MIN        -80
