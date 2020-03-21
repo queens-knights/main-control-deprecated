@@ -20,6 +20,8 @@ git clone https://github.com/sikaxn/QRMWiki.git
 
 # Announcements
 
+**STAY AT HOME**
+
 **Due to Coronavirus, DJI release an announcement.**
 
 [Read the announcement here](https://www.robomaster.com/en-US/resource/pages/1105?type=announcementSub) and wash your hand frequently. 
